@@ -1,0 +1,35 @@
+body#page-add_car {
+  form {
+    label {
+      color: #FFF;
+    }
+    &#add-stock-form {
+      background-color: $secondary-color;
+      padding: 10px;
+      border-radius: 3px;
+      label {
+        color: #000000;
+      }
+
+      .btn {
+        background-color: #FFF;
+        color: #000000;
+        border: 0;
+      }
+    }
+    &#reg-car-form {
+      background-color: $secondary-color;
+      padding: 10px;
+      border-radius: 3px;
+      label {
+        color: #000000;
+      }
+
+      .btn {
+        background-color: #FFF;
+        color: #000000;
+        border: 0;
+      }
+    }
+  }
+}

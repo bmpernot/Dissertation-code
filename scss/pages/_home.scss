@@ -1,0 +1,20 @@
+body#page-home {
+  #even {
+    padding-top: 15px;
+    padding-bottom: 15px;
+    background-color: $secondary-color;
+
+    .btn{
+      background-color: $primary-color;
+    }
+  }
+
+  #odd {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
+    .btn {
+      margin-bottom: 15px;
+    }
+  }
+}

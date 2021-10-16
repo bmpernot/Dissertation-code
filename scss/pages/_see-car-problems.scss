@@ -1,0 +1,31 @@
+body#page-see_car_problems {
+  form {
+    background-color: $secondary-color;
+    padding: 10px;
+    border-radius: 3px;
+    label {
+      color: #000000;
+    }
+
+    .btn {
+      background-color: #FFF;
+      color: #000000;
+      border: 0;
+    }
+
+    &#finish {
+      background-color: $primary-color;
+      padding: 10px;
+      border-radius: 3px;
+      label {
+        color: #000000;
+      }
+
+      .btn {
+        background-color: $secondary-color;
+        color: #000000;
+        border: 0;
+      }
+    }
+  }
+}

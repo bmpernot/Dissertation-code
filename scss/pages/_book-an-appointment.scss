@@ -1,0 +1,35 @@
+body#page-book_an_appointment {
+  form {
+    label {
+      color: #FFF;
+    }
+    &#book-appointment {
+      background-color: $secondary-color;
+      padding: 10px;
+      border-radius: 3px;
+      label {
+        color: #000000;
+      }
+
+      .btn {
+        background-color: #FFF;
+        color: #000000;
+        border: 0;
+      }
+    }
+    &#cancel-appointment {
+      background-color: $secondary-color;
+      padding: 10px;
+      border-radius: 3px;
+      label {
+        color: #000000;
+      }
+
+      .btn {
+        background-color: #FFF;
+        color: #000000;
+        border: 0;
+      }
+    }
+  }
+}
