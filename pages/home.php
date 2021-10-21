@@ -9,7 +9,7 @@
         However, not many people know where to start. Shades of Green is a platform where it provide accurate information about different eco housing option.
       </p>
       <p>
-        If you Register / Login and enter some information about your house you will recieve accurate pricing to install the eco housing options to your home. prices many change to curcumstances such as location and price of the actual materials need to make the eco housing option.
+        If you Login / Register and enter some information about your house you will recieve accurate pricing to install the eco housing options to your home. prices many change to curcumstances such as location and price of the actual materials need to make the eco housing option.
       </p>
     </div>
     <div class="col-lg-3">
@@ -24,7 +24,7 @@
     </div>
     <div class="col-lg-3">
       <img src="./images/solar_panels.jpg" alt="Solar panels">
-      <a href="index.php?p=cars" class="btn btn-btn-shadesofgreen">Browse Green Housing Options</a>
+      <a href="index.php?p=eco-housing-options" class="btn btn-btn-shadesofgreen">Browse Green Housing Options</a>
     </div>
   </div>
 </div>

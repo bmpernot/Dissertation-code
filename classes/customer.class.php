@@ -9,35 +9,24 @@
      public function createCustomer($user_data){
        $sec_password = password_hash($user_data['password'], PASSWORD_DEFAULT);
 
-       $query = "INSERT INTO Customers (
-         Email, Password, FirstName, LastName, AddressLine1, AddressLine2, Town_City,
-         County, Postcode, MobileNumber, HomeNumber
+       $query = "INSERT INTO User (
+         username, password
        ) VALUES (
-         :Email, :Password, :FirstName, :LastName, :AddressLine1, :AddressLine2, :Town_City,
-         :County, :Postcode, :MobileNumber, :HomeNumber
+         :Username, :Password
        )";
 
        $stmt = $this->Conn->prepare($query);
 
        return $stmt->execute(array(
-         'Email' => strtolower($user_data['email']),
-         'Password' => $sec_password,
-         'FirstName' => $user_data['first_name'],
-         'LastName' => $user_data['last_name'],
-         'AddressLine1' => $user_data['address_line_1'],
-         'AddressLine2' => $user_data['address_line_2'],
-         'Town_City' => $user_data['town_city'],
-         'County' => $user_data['county'],
-         'Postcode' => $user_data['postcode'],
-         'MobileNumber' => $user_data['mobile_number'],
-         'HomeNumber' => $user_data['home_number']
+         'Username' => strtolower($user_data['username']),
+         'Password' => $sec_password
        ));
      }
 
      public function loginCustomer($user_data) {
-       $query = "SELECT * FROM Customers WHERE Email = :Email";
+       $query = "SELECT * FROM User WHERE username = :username";
        $stmt = $this->Conn->prepare($query);
-       $stmt->execute(array('Email' => strtolower($user_data['email'])));
+       $stmt->execute(array('username' => strtolower($user_data['username'])));
        $attempt = $stmt->fetch();
 
        if($attempt && password_verify($user_data['password'], $attempt['Password'])) {

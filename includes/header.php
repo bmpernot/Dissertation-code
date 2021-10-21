@@ -2,7 +2,7 @@
 <html>
 
   <head>
-    <title>AutoCarUK - Affordable and Efficient Cars and Parts</title>
+    <title>Shades Of Green - Accurate Information On All Eco Housing Options</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css\styles.css">
@@ -28,7 +28,7 @@
                 <a class="nav-link" href="index.php?p=home">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="index.php?p=book_an_appointment">Green Housing Options</a>
+                <a class="nav-link" href="index.php?p=eco-housing-options">Green Housing Options</a>
               </li>
             </ul>
             <ul class="navbar-nav mr-auto">

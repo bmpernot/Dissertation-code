@@ -10,14 +10,11 @@ $Customer = new Customer($Conn);
 
 <?php
 if($_POST){
-    if(!$_POST['email']){
-      $error = "Email not set";
+    if(!$_POST['username']){
+      $error = "Username not set";
     }
     elseif (!$_POST['password']) {
       $error = "Error - Password not set";
-    }
-    elseif (!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-      $error = "Error - Email address is not valid";
     }
     elseif(strlen($_POST['password']) < 8) {
       $error = "Error - Password must be at least 8 characters in length";
@@ -57,18 +54,16 @@ if($_POST){
     <div class="col-md-12">
       <form id="login-form" method="post" action="">
         <div class="form-group">
-          <label for="login_email">Email address</label>
-          <input type="email" class="form-control" id="login_email" name="email">
+          <label for="login_username">Username</label>
+          <input type="text" class="form-control" id="login_username" name="username">
         </div>
         <div class="form-group">
           <label for="login_password">Password</label>
           <input type="password" class="form-control" id="login_password" name="password">
         </div>
-        <button type="submit" name="login" value="1" class="btn btn-autocaruk">Login</button>
+        <button type="submit" name="login" value="1" class="btn btn-shadesofgreen">Login</button>
         or
-        <a href="index.php?p=register" class="btn btn-autocaruk">Customer Register</a>
-        or
-        <a href="index.php?p=staff_login" class="btn btn-autocaruk">Staff Login</a>
+        <a href="index.php?p=register" class="btn btn-shadesofgreen">Customer Register</a>
       </form>
     </div>
   </div>

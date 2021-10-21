@@ -17,24 +17,34 @@
 
 // Components
 @import "components/button";
-@import "components/car-card";
-@import "components/part-card";
+@import "components/eco-housing-option-card";
+@import "components/row"; //might need to remove
 
 // Pages
 @import "pages/account";
-@import "pages/add-car";
-@import "pages/add-part";
-@import "pages/basket";
-@import "pages/car-categories";
-@import "pages/see-car-problems";
 @import "pages/register";
 @import "pages/login";
-@import "pages/car";
-@import "pages/part";
+@import "pages/roof-insulation";
+@import "pages/wall-insulation";
+@import "pages/airtightness";
+@import "pages/daylight-exposure";
+@import "pages/triple-double-glazed-windows";
+@import "pages/led-lights";
+@import "pages/solar-panels";
+@import "pages/energy-storage-devices";
+@import "pages/solar-water-heating";
+@import "pages/forced-air-heating";
+@import "pages/thermostat";
+@import "pages/air-ground-source-heat-pump";
+@import "pages/water-collection";
+@import "pages/compost";
+@import "pages/recycling";
+@import "pages/smart-meter";
+@import "pages/induction-ovens-and-hobs";
+@import "pages/insulating-curtains";
+@import "pages/radiator-reflectors";
+@import "pages/eco-housing-options";
 @import "pages/home";
-@import "pages/staff-login";
-@import "pages/staff-register";
-@import "pages/book-an-appointment";
 
 //Themes
 @import "themes/theme";

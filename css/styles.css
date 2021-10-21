@@ -7842,7 +7842,7 @@ header nav {
   background-color: #9ad494;
   color: #000000; }
 
-.car-card {
+.eco-housing-option-card {
   margin: 0 0 30px 0;
   background-color: #FFF;
   box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
@@ -7850,7 +7850,7 @@ header nav {
   text-align: center;
   border: solid 1px #eaeaea;
   border-radius: 3px; }
-  .car-card .car-card-image {
+  .eco-housing-option-card .eco-housing-option-card-image {
     height: 200px;
     background-repeat: no-repeat;
     background-position: center center;
@@ -7858,153 +7858,30 @@ header nav {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover; }
-    .car-card .car-card-image a {
+    .eco-housing-option-card .eco-housing-option-card-image a {
       display: block;
       height: 200px; }
-  .car-card a {
+  .eco-housing-option-card a {
     color: #d8ffd4;
     text-decoration: none; }
-    .car-card a h3 {
+    .eco-housing-option-card a h3 {
       font-size: 1.1rem;
       padding-top: 10px;
       margin: 0;
       color: #000000; }
 
-.part-card {
-  margin: 0 0 30px 0;
-  background-color: #FFF;
-  box-shadow: 2px 2px 4px 0 rgba(0, 0, 0, 0.15);
-  padding: 12px;
-  text-align: center;
-  border: solid 1px #eaeaea;
-  border-radius: 3px; }
-  .part-card .part-card-image {
-    height: 200px;
-    background-repeat: no-repeat;
-    background-position: center center;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; }
-    .part-card .part-card-image a {
-      display: block;
-      height: 200px; }
-  .part-card a {
-    color: #d8ffd4;
-    text-decoration: none; }
-    .part-card a h3 {
-      font-size: 1.1rem;
-      padding-top: 10px;
-      margin: 0;
-      color: #000000; }
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
 
-body#page-account form label {
-  color: #FFF; }
-body#page-account form#add_car {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-account form#add_car label {
-    color: #000000; }
-  body#page-account form#add_car .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
-body#page-account form#remove_car {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-account form#remove_car label {
-    color: #000000; }
-  body#page-account form#remove_car .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
-
-body#page-add_car form label {
-  color: #FFF; }
-body#page-add_car form#add-stock-form {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-add_car form#add-stock-form label {
-    color: #000000; }
-  body#page-add_car form#add-stock-form .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
-body#page-add_car form#reg-car-form {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-add_car form#reg-car-form label {
-    color: #000000; }
-  body#page-add_car form#reg-car-form .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
-
-body#page-add_part form label {
-  color: #FFF; }
-body#page-add_part form#add-stock-form {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-add_part form#add-stock-form label {
-    color: #000000; }
-  body#page-add_part form#add-stock-form .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
-body#page-add_part form#reg-part-form {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-add_part form#reg-part-form label {
-    color: #000000; }
-  body#page-add_part form#reg-part-form .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
-
-body#page-basket .car-card-image,
-body#page-basket .part-card-image {
-  height: 200px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
-  width: 200px; }
-  body#page-basket .car-card-image a,
-  body#page-basket .part-card-image a {
-    display: block;
-    height: 200px; }
-
-body#page-car_categories .car-category-card {
+body#page-account #house_details {
+  padding-top: 15px;
+  padding-bottom: 15px;
   background-color: #9ad494; }
-
-body#page-see_car_problems form {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-see_car_problems form label {
-    color: #000000; }
-  body#page-see_car_problems form .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
-  body#page-see_car_problems form#finish {
-    background-color: #d8ffd4;
-    padding: 10px;
-    border-radius: 3px; }
-    body#page-see_car_problems form#finish label {
-      color: #000000; }
-    body#page-see_car_problems form#finish .btn {
-      background-color: #9ad494;
-      color: #000000;
-      border: 0; }
+  body#page-account #house_details .btn {
+    background-color: #d8ffd4; }
 
 body#page-register form label {
   color: #FFF; }
@@ -8032,73 +7909,236 @@ body#page-login form#login-form {
     color: #000000;
     border: 0; }
 
-body#page-car .car-image {
-  border: solid 3px #000000;
-  height: 150px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  body#page-car .car-image a {
-    display: block;
-    height: 150px; }
-body#page-car .car-features {
-  list-style: none;
-  padding: 0;
-  color: #000000; }
-  body#page-car .car-features li {
-    margin-bottom: 10px; }
-    body#page-car .car-features li i {
-      text-align: center;
-      width: 27px; }
-body#page-car form label {
-  color: #FFF; }
-body#page-car form#add_to_basket {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-car form#add_to_basket label {
-    color: #000000; }
-  body#page-car form#add_to_basket .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
+body#page-roof-insulation #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-roof-insulation #even .btn {
+    background-color: #d8ffd4; }
+body#page-roof-insulation #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-roof-insulation #odd .btn {
+    margin-bottom: 15px; }
 
-body#page-part .part-image {
-  border: solid 3px #000000;
-  height: 150px;
-  background-repeat: no-repeat;
-  background-position: center center;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover; }
-  body#page-part .part-image a {
-    display: block;
-    height: 150px; }
-body#page-part .part-features {
-  list-style: none;
-  padding: 0;
-  color: #000000; }
-  body#page-part .part-features li {
-    margin-bottom: 10px; }
-    body#page-part .part-features li i {
-      text-align: center;
-      width: 27px; }
-body#page-part form label {
-  color: #FFF; }
-body#page-part form#add_to_basket {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-part form#add_to_basket label {
-    color: #000000; }
-  body#page-part form#add_to_basket .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
+body#page-wall-insulation #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-wall-insulation #even .btn {
+    background-color: #d8ffd4; }
+body#page-wall-insulation #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-wall-insulation #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-airtightness #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-airtightness #even .btn {
+    background-color: #d8ffd4; }
+body#page-airtightness #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-airtightness #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-daylight-exposure #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-daylight-exposure #even .btn {
+    background-color: #d8ffd4; }
+body#page-daylight-exposure #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-daylight-exposure #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-triple-double-glazed-windows #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-triple-double-glazed-windows #even .btn {
+    background-color: #d8ffd4; }
+body#page-triple-double-glazed-windows #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-triple-double-glazed-windows #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-led-lights #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-led-lights #even .btn {
+    background-color: #d8ffd4; }
+body#page-led-lights #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-led-lights #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-solar-panels #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-solar-panels #even .btn {
+    background-color: #d8ffd4; }
+body#page-solar-panels #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-solar-panels #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-energy-storage-devices #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-energy-storage-devices #even .btn {
+    background-color: #d8ffd4; }
+body#page-energy-storage-devices #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-energy-storage-devices #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-solar-water-heating #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-solar-water-heating #even .btn {
+    background-color: #d8ffd4; }
+body#page-solar-water-heating #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-solar-water-heating #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-forced-air-heating #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-forced-air-heating #even .btn {
+    background-color: #d8ffd4; }
+body#page-forced-air-heating #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-forced-air-heating #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-thermostat #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-thermostat #even .btn {
+    background-color: #d8ffd4; }
+body#page-thermostat #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-thermostat #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-air-ground-source-heat-pump #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-air-ground-source-heat-pump #even .btn {
+    background-color: #d8ffd4; }
+body#page-air-ground-source-heat-pump #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-air-ground-source-heat-pump #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-water-collection #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-water-collection #even .btn {
+    background-color: #d8ffd4; }
+body#page-water-collection #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-water-collection #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-compost #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-compost #even .btn {
+    background-color: #d8ffd4; }
+body#page-compost #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-compost #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-recycling #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-recycling #even .btn {
+    background-color: #d8ffd4; }
+body#page-recycling #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-recycling #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-smart-meter #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-smart-meter #even .btn {
+    background-color: #d8ffd4; }
+body#page-smart-meter #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-smart-meter #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-induction-ovens-and-hobs #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-induction-ovens-and-hobs #even .btn {
+    background-color: #d8ffd4; }
+body#page-induction-ovens-and-hobs #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-induction-ovens-and-hobs #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-insulating-curtains #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-insulating-curtains #even .btn {
+    background-color: #d8ffd4; }
+body#page-insulating-curtains #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-insulating-curtains #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-radiator-reflectors #even {
+  padding-top: 15px;
+  padding-bottom: 15px;
+  background-color: #9ad494; }
+  body#page-radiator-reflectors #even .btn {
+    background-color: #d8ffd4; }
+body#page-radiator-reflectors #odd {
+  padding-top: 15px;
+  padding-bottom: 15px; }
+  body#page-radiator-reflectors #odd .btn {
+    margin-bottom: 15px; }
+
+body#page-eco-housing-options .eco-housing-option-card {
+  background-color: #9ad494; }
 
 body#page-home #even {
   padding-top: 15px;
@@ -8111,55 +8151,6 @@ body#page-home #odd {
   padding-bottom: 15px; }
   body#page-home #odd .btn {
     margin-bottom: 15px; }
-
-body#page-staff_login form label {
-  color: #FFF; }
-body#page-staff_login form#login-form {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-staff_login form#login-form label {
-    color: #000000; }
-  body#page-staff_login form#login-form .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
-
-body#page-staff_register form label {
-  color: #FFF; }
-body#page-staff_register form#login-form {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-staff_register form#login-form label {
-    color: #000000; }
-  body#page-staff_register form#login-form .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
-
-body#page-book_an_appointment form label {
-  color: #FFF; }
-body#page-book_an_appointment form#book-appointment {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-book_an_appointment form#book-appointment label {
-    color: #000000; }
-  body#page-book_an_appointment form#book-appointment .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
-body#page-book_an_appointment form#cancel-appointment {
-  background-color: #9ad494;
-  padding: 10px;
-  border-radius: 3px; }
-  body#page-book_an_appointment form#cancel-appointment label {
-    color: #000000; }
-  body#page-book_an_appointment form#cancel-appointment .btn {
-    background-color: #FFF;
-    color: #000000;
-    border: 0; }
 
 body {
   background-color: #d8ffd4; }
