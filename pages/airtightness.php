@@ -22,13 +22,15 @@
       <?php // } ?>
     </div>
   </div>
-  <div class="row">
+  <div id="odd" class="row">
     <h2>How it will be installed:</h2>
     <p></p>
-    <br>
+  </div>
+  <div id="even" class="row">
     <h2>Instructions:</h2>
     <p></p>
-    <br>
+  </div>
+  <div id="odd" class="row">
     <h2>The science:</h2>
     <p></p>
   </div>
