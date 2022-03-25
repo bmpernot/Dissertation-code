@@ -13,7 +13,7 @@
       </p>
     </div>
     <div class="col-lg-3">
-      <img src="./images/house_1.jpg" alt="House Photo">
+      <img src="./eco-houseing-option-images\eco-construction-1894026.png" alt="House Photo">
     </div>
   </div>
   <div id="even" class="row">
@@ -23,7 +23,7 @@
       </p>
     </div>
     <div class="col-lg-3">
-      <img src="./images/solar_panels.jpg" alt="Solar panels">
+      <img src="./eco-houseing-option-images\solar-panels-943999.jpg" alt="Solar panels">
       <a href="index.php?p=eco-housing-options" class="btn btn-btn-shadesofgreen">Browse Green Housing Options</a>
     </div>
   </div>

@@ -65,7 +65,7 @@
         </div>
         <button type="submit" class="btn btn-shadesofgreen">Register</button>
         or
-        <a href="index.php?p=login" class="btn btn-shadesofgreen">Customer Login</a>
+        <a href="index.php?p=login" class="btn btn-shadesofgreen">Login</a>
       </form>
     </div>
   </div>
