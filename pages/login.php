@@ -63,7 +63,7 @@ if($_POST){
         </div>
         <button type="submit" name="login" value="1" class="btn btn-shadesofgreen">Login</button>
         or
-        <a href="index.php?p=register" class="btn btn-shadesofgreen">Customer Register</a>
+        <a href="index.php?p=register" class="btn btn-shadesofgreen">Register</a>
       </form>
     </div>
   </div>
