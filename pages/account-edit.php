@@ -193,10 +193,10 @@ $User_House = $user_House->getHouse();
               <label for="update_house_roof_angle">Roof Angle:</label>
               <p>Take the largest side of the house's roof and estimate/measure the angle it is at to get to the highest point</p>
               <input type="range" class="slider" id="update_house_roof_angle" min="0" max="90" value=<?php echo $User_House['roof_angle']; ?>>
-              <p>Value: <span id="value"></span></p>
+              <p>Value: <span id="value"></span>°</p>
             </div>
             <script>                                                                            <!-- // www.w3schools.com/howto/howto_js_rangeslider.asp -->
-              var slider = document.getElementById("slider");
+              var slider = document.getElementById("update_house_roof_angle");
               var output = document.getElementById("value");
               output.innerHTML = slider.value;
 
@@ -323,10 +323,10 @@ $User_House = $user_House->getHouse();
               <label for="input_house_roof_angle">Roof Angle:</label>
               <p>Take the largest side of the house's roof and estimate/measure the angle it is at to get to the highest point</p>
               <input type="range" class="slider" id="input_house_roof_angle" min="0" max="90">
-              <p>Value: <span id="value"></span></p>
+              <p>Value: <span id="value"></span>°</p>
             </div>
             <script>                                                                            <!-- // www.w3schools.com/howto/howto_js_rangeslider.asp -->
-              var slider = document.getElementById("slider");
+              var slider = document.getElementById("input_house_roof_angle");
               var output = document.getElementById("value");
               output.innerHTML = slider.value;
 
