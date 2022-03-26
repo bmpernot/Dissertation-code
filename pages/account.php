@@ -9,8 +9,8 @@ $Customer = new Customer($Conn);
   <p>Welcome to to your account.<br>
     From here you can view the house details you have entered or if you haven't entered any you can do so.<br>
     Also you can edit the details of your house by clicking the edit button below once detail exist.</p>
-  <div id="house_details" class="row">
     <h2>House details:</h2>
+  <div id="house_details" class="row">
     <?php if($User_House) { ?>
       <div class="col-md-12">
         <h3>House Width:</h3>
@@ -61,9 +61,9 @@ $Customer = new Customer($Conn);
       </div>
     <?php } ?>
   </div>
+  <h2>Delete Account</h2>
+  <p>Please enter your username and password if you would like to delete your account.</p>
   <div id="delete account" class="row">
-    <h2>Delete Account</h2>
-    <p>Please enter your username and password if you would like to delete your account.</p>
     <?php
     if($_POST){
         if(!$_POST['username']){
@@ -87,7 +87,7 @@ $Customer = new Customer($Conn);
       }
       ?>
       <div class="col-md-12">
-        <form id="login-form" method="post" action="">
+        <form id="delete-form" method="post" action="">
           <div class="form-group">
             <label for="login_username">Username</label>
             <input type="text" class="form-control" id="login_username" name="username">

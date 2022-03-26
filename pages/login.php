@@ -32,6 +32,9 @@ if($_POST){
         // Credentials correct
         $_SESSION['is_logged_in'] = true;
         $_SESSION['user_data'] = $user_data;
+        echo '<script>window.location.replace("index.php");</script>';
+
+        // might not work
         ?>
             <div class="alert alert-success" role="alert">
                 Success - You have been logged in, welcome back!
@@ -61,9 +64,7 @@ if($_POST){
           <label for="login_password">Password</label>
           <input type="password" class="form-control" id="login_password" name="password">
         </div>
-        <button type="submit" name="login" value="1" class="btn btn-shadesofgreen">Login</button>
-        or
-        <a href="index.php?p=register" class="btn btn-shadesofgreen">Register</a>
+        <button type="submit" name="login" value="1" class="btn btn-shadesofgreen">Login</button> or <a href="index.php?p=register" class="btn btn-shadesofgreen">Register</a>
       </form>
     </div>
   </div>

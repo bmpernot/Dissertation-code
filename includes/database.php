@@ -1,6 +1,6 @@
 <?php
 define("DB_HOST", "localhost");
-define("DB_NAME", "ShadesOfGreen_Database");
+define("DB_NAME", "ShadesOfGreen_DataBase");
 define("DB_USER", "benpernotuos");
 define("DB_PASS", "99CrQ72MbsxnriW");
 

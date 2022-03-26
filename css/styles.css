@@ -7794,7 +7794,7 @@ h1 {
   font-weight: 100;
   color: #000000;
   font-size: 2.2rem;
-  border-bottom: solid 2px #66d891; }
+  border-bottom: solid 2px #9ad494; }
 
 p {
   color: #000000;
@@ -7818,9 +7818,11 @@ option {
   color: #000000; }
 
 footer {
-  background-color: #d8ffd4; }
+  background-color: #9ad494; }
   footer p {
-    font-size: 0.9rem; }
+    font-size: 0.9rem;
+    padding-top: 20px;
+    padding-bottom: 20px; }
 
 header .page-header-top {
   padding: 0 0 0 0; }
@@ -7840,7 +7842,8 @@ header nav {
 
 .btn.btn-shadesofgreen {
   background-color: #9ad494;
-  color: #000000; }
+  color: #000000;
+  margin-top: 25px; }
 
 .eco-housing-option-card {
   margin: 0 0 30px 0;
@@ -7907,11 +7910,49 @@ header nav {
   display: flex; }
 
 body#page-account #house_details {
-  padding-top: 15px;
-  padding-bottom: 15px;
+  padding: 10px;
+  border-radius: 3px;
   background-color: #9ad494; }
   body#page-account #house_details .btn {
     background-color: #d8ffd4; }
+body#page-account form label {
+  color: #FFF; }
+body#page-account form#delete-form {
+  background-color: #9ad494;
+  padding: 10px;
+  border-radius: 3px; }
+  body#page-account form#delete-form label {
+    color: #000000; }
+  body#page-account form#delete-form .btn {
+    background-color: #d8ffd4; }
+body#page-account h2 {
+  font-weight: 100;
+  color: #000000;
+  font-size: 1.8rem;
+  border-bottom: solid 2px #9ad494; }
+
+body#page-account-edit form label {
+  color: #FFF; }
+body#page-account-edit form#update_house {
+  background-color: #9ad494;
+  padding: 10px;
+  border-radius: 3px; }
+  body#page-account-edit form#update_house label {
+    color: #000000; }
+  body#page-account-edit form#update_house .btn {
+    background-color: #FFF;
+    color: #000000;
+    border: 0; }
+body#page-account-edit form#input_house {
+  background-color: #9ad494;
+  padding: 10px;
+  border-radius: 3px; }
+  body#page-account-edit form#input_house label {
+    color: #000000; }
+  body#page-account-edit form#input_house .btn {
+    background-color: #FFF;
+    color: #000000;
+    border: 0; }
 
 body#page-register form label {
   color: #FFF; }
@@ -8170,6 +8211,8 @@ body#page-radiator-reflectors #odd {
 body#page-eco-housing-options .eco-housing-option-card {
   background-color: #9ad494; }
 
+body#page-home img {
+  padding-bottom: 5px; }
 body#page-home #even {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -8183,7 +8226,7 @@ body#page-home #odd {
     margin-bottom: 15px; }
 
 body {
-  background-color: #d8ffd4; }
+  background-color: #ffffff; }
 
 img {
   max-width: 100%; }

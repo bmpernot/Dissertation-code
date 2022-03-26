@@ -1,11 +1,35 @@
 body#page-account {
   #house_details {
-    padding-top: 15px;
-    padding-bottom: 15px;
+
+    padding: 10px;
+    border-radius: 3px;
     background-color: $secondary-color;
 
     .btn{
       background-color: $primary-color;
     }
+  }
+  form {
+    label {
+      color: #FFF;
+    }
+    &#delete-form {
+      background-color: $secondary-color;
+      padding: 10px;
+      border-radius: 3px;
+      label {
+        color: #000000;
+      }
+
+      .btn {
+        background-color: $primary-color;
+      }
+    }
+  }
+  h2 {
+      font-weight: 100;
+      color: #000000;
+      font-size: 1.8rem;
+      border-bottom: solid 2px $secondary-color;
   }
 }

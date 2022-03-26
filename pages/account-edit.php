@@ -24,13 +24,13 @@ $User_House = $user_House->getHouse();
     elseif(!$_POST['window_area']){
       $error = "Error - Window area is not set";
     }
-    elseif(!$_POST['no_windows_first_floor']){
+    elseif(!$_POST['window_number_first_floor']){
       $error = "Error - Number of windows on the first floor is not set";
     }
-    elseif(!$_POST['no_windows_second_floor']){
+    elseif(!$_POST['window_number_second_floor']){
       $error = "Error - Number of windows on the second floor is not set";
     }
-    elseif(!$_POST['no_windows_thrid_floor']){
+    elseif(!$_POST['window_number_thrid_floor']){
       $error = "Error - Number of windows on the thrid floor is not set";
     }
     elseif(!$_POST['roof_angle']){
@@ -281,27 +281,27 @@ $User_House = $user_House->getHouse();
         <div class="col-md-12">
           <form id="input_house" method="post" action="">
             <div class="form-group">
-              <label for="input_house_house_width">House Width:</label>
+              <label for="input_house_house_width">House Width (Meters):</label>
               <input type="number" class="form-control" id="input_house_house_width" name="house_width">
             </div>
             <div class="form-group">
-              <label for="input_house_house_length">House Length:</label>
+              <label for="input_house_house_length">House Length (Meters):</label>
               <input type="number" class="form-control" id="input_house_house_length" name="house_length">
             </div>
             <div class="form-group">
-              <label for="input_house_house_height">House Height:</label>
+              <label for="input_house_house_height">House Height (Meters):</label>
               <input type="number" class="form-control" id="input_house_house_height" name="house_height">
             </div>
             <div class="form-group">
-              <label for="input_house_garden_length">Garden Length:</label>
+              <label for="input_house_garden_length">Garden Length (Meters):</label>
               <input type="number" class="form-control" id="input_house_garden_length" name="garden_length">
             </div>
             <div class="form-group">
-              <label for="input_house_garden_width">Garden Width:</label>
+              <label for="input_house_garden_width">Garden Width (Meters):</label>
               <input type="number" class="form-control" id="input_house_garden_width" name="garden_width">
             </div>
             <div class="form-group">
-              <label for="input_house_window_area">Window Area:</label>
+              <label for="input_house_window_area">Window Area (Meters²):</label>
               <p>If you calulate the area of each window in meters² then add them all together</p>
               <p>For example; a window is 0.5m * 2m the surface area would be 1 M² and another window is 2m * 1m the surface area would be 2m²</p>
               <p>The combined area would be 3m² as 1m² + 2m² = 3m²</p>
@@ -339,7 +339,7 @@ $User_House = $user_House->getHouse();
               <input type="number" class="form-control" id="input_house_radiator_no" name="radiator_no">
             </div>
             <div class="form-group">
-              <label for="input_house_radiator_area">Radiator Surface Area:</label>
+              <label for="input_house_radiator_area">Radiator Surface Area (Meters²):</label>
               <p>If you calulate the area of each radiator in meters² then add them all together</p>
               <p>For example; a radiator is 0.5m * 2m the surface area would be 1 M² and another radiator is 2m * 1m the surface area would be 2m²</p>
               <p>The combined area would be 3m² as 1m² + 2m² = 3m²</p>
@@ -365,6 +365,7 @@ $User_House = $user_House->getHouse();
               <label for="input_house_house_type">House Type:</label>
               <p>If option is not avaiable choose closest option</p>
               <select class="form-control" id="input_house_house_type" name="house_type">
+                <option Value="" selected disabled>Choose Type of House</option>
                 <option value="detached_house">Detached house</option>
                 <option value="semi_detached_house">Semi-detached house</option>
                 <option value="mid_terrace_house">Mid-terrace house</option>
@@ -376,6 +377,7 @@ $User_House = $user_House->getHouse();
               <label for="input_house_current_heating_device">Current Heating Device:</label>
               <p>If option is not avaiable choose closest option</p>
               <select class="form-control" id="input_house_current_heating_device" name="current_heating_device">
+                <option Value="" selected disabled>Choose Current Heating Device</option>
                 <option value="old_gas">Old (G-rated) gas boiler</option>
                 <option value="new_gas">New (A-rated) gas boiler</option>
                 <option value="old_electric">Old electric storage heater</option>
@@ -389,8 +391,8 @@ $User_House = $user_House->getHouse();
             </div>
             <div class="form-group">
               <label for="input_house_closest_area">Closest Area:</label>
-              <p>If option is not avaiable choose closest option</p>
               <select class="form-control" id="input_house_closest_area" name="closest_area">
+                <option Value="" selected disabled>Choose the Closest Area to the House's Location</option>
                 <option value="london">London, Southeast England</option>
                 <option value="aberystwyth">Aberystwyth, Wales</option>
                 <option value="manchester">Manchester, North England</option>

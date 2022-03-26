@@ -31,7 +31,7 @@
                 <a class="nav-link" href="index.php?p=eco-housing-options">Green Housing Options</a>
               </li>
             </ul>
-            <ul class="navbar-nav mr-auto alignright"> <!--i have put teh align right tag in to see if it works. -->
+            <ul class="navbar-nav alignright"> <!--i have put thh align right tag in to see if it works. -->
               <?php
               if($_SESSION['is_logged_in']){
               ?>
