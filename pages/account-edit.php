@@ -42,7 +42,7 @@ $User_House = $user_House->getHouse();
     elseif(!$_POST['radiator_area']){
       $error = "Error - Radiator area is not set";
     }
-    elseif(!$_POST['no_light']){
+    elseif(!$_POST['no_lights']){
       $error = "Error - Number of lights is not set";
     }
     elseif(!$_POST['current_heating_device']){
@@ -53,6 +53,15 @@ $User_House = $user_House->getHouse();
     }
     elseif(!$_POST['closest_area']){
       $error = "Error - Closest area is not set";
+    }
+    elseif(!$_POST['guttering']){
+      $_POST['guttering'] = 0;
+    }
+    elseif(!$_POST['attic']){
+      $_POST['attic'] = 0;
+    }
+    elseif(!$_POST['hot_water_tank']){
+      $_POST['hot_water_tank'] = 0;
     }
     elseif($_POST['house_width'] <= 0){
       $error = "Error - House width cannot be less than or equal to 0";
@@ -111,11 +120,7 @@ $User_House = $user_House->getHouse();
       if($_POST['update_house']) {
         $attempt = $user_House->updateHouse($_POST);
         if($attempt) {
-          ?>
-          <div class="alert alert-success" role="alert">
-              Success - Your house details have been updated.
-          </div>
-          <?php
+          echo '<script>window.location.replace("index.php?p=account");</script>';
         }else{
           ?>
           <div class="alert alert-danger" role="alert">
@@ -146,7 +151,8 @@ $User_House = $user_House->getHouse();
 
   <h1 class="mb-4 pb-2"> My Account</h1>
     <div class="row">
-      <?php if($User_House) { ?>
+      <?php if($User_House) {
+        var_dump($User_House)?>
         <h2>Update House Details</h2>
         <div class="col-md-12">
           <form id="update_house" method="post" action="">
@@ -179,23 +185,23 @@ $User_House = $user_House->getHouse();
             </div>
             <div class="form-group">
               <label for="update_house_window_number_first_floor">Number of Windows on First Floor:</label>
-              <input type="number" class="form-control" id="update_house_window_number_first_floor" name="window_number_first_floor" value=<?php echo $User_House['window_number_first_floor']; ?>>
+              <input type="number" class="form-control" id="update_house_window_number_first_floor" name="window_number_first_floor" value=<?php echo $User_House['no_windows_first_floor']; ?>>
             </div>
             <div class="form-group">
               <label for="update_house_window_number_second_floor">Number of Windows on Second Floor:</label>
-              <input type="number" class="form-control" id="update_house_window_number_second_floor" name="window_number_second_floor" value=<?php echo $User_House['window_number_second_floor']; ?>>
+              <input type="number" class="form-control" id="update_house_window_number_second_floor" name="window_number_second_floor" value=<?php echo $User_House['no_windows_second_floor']; ?>>
             </div>
             <div class="form-group">
               <label for="update_house_window_number_thrid_floor">Number of Windows on Thrid Floor:</label>
-              <input type="number" class="form-control" id="update_house_window_number_thrid_floor" name="window_number_thrid_floor" value=<?php echo $User_House['window_number_thrid_floor']; ?>>
+              <input type="number" class="form-control" id="update_house_window_number_thrid_floor" name="window_number_thrid_floor" value=<?php echo $User_House['no_windows_thrid_floor']; ?>>
             </div>
             <div class="slidecontainer">
               <label for="update_house_roof_angle">Roof Angle:</label>
               <p>Take the largest side of the house's roof and estimate/measure the angle it is at to get to the highest point</p>
-              <input type="range" class="slider" id="update_house_roof_angle" min="0" max="90" value=<?php echo $User_House['roof_angle']; ?>>
+              <input type="range" class="slider" id="update_house_roof_angle" name="roof_angle" min="0" max="90" value=<?php echo $User_House['roof_angle']; ?>>
               <p>Value: <span id="value"></span>°</p>
             </div>
-            <script>                                                                            <!-- // www.w3schools.com/howto/howto_js_rangeslider.asp -->
+            <script>
               var slider = document.getElementById("update_house_roof_angle");
               var output = document.getElementById("value");
               output.innerHTML = slider.value;
@@ -217,58 +223,55 @@ $User_House = $user_House->getHouse();
             </div>
             <div class="form-group">
               <label for="update_house_guttering">Does the House have Guttering:</label>
-              <input type="checkbox" name="update_house_guttering" value=1 <?php if($User_House['radiator_area'] == 1 ){?> checked <?php } ?>>
+              <input type="checkbox" id="update_house_guttering" name="guttering" value=1 <?php if($User_House['guttering'] == 1 ){ ?> checked <?php } ?>>
             </div>
             <div class="form-group">
               <label for="update_house_guttering">Does the House have an Attic:</label>
-              <input type="checkbox" name="update_house_attic" value=1 <?php if($User_House['attic'] == 1 ){?> checked <?php } ?>>
+              <input type="checkbox" id="update_house_attic" name="attic" value=1 <?php if($User_House['attic'] == 1 ){ ?> checked <?php } ?>>
             </div>
             <div class="form-group">
               <label for="update_house_guttering">Does the House have a Hot Water Tank:</label>
-              <input type="checkbox" name="update_house_hot_water_tank" value=1 <?php if($User_House['hot_water_tank'] == 1 ){?> checked <?php } ?>>
+              <input type="checkbox" id="update_house_hot_water_tank" name="hot_water_tank" value=1 <?php if($User_House['hot_water_tank'] == 1 ){ ?> checked <?php } ?>>
             </div>
             <div class="form-group">
-              <label for="update_house_no_light">Number of Lights:</label>
-              <input type="number" class="form-control" id="update_house_no_light" name="no_light" value=<?php echo $User_House['no_light']; ?>>
+              <label for="update_house_no_lights">Number of Lights:</label>
+              <input type="number" class="form-control" id="update_house_no_lights" name="no_lights" value=<?php echo $User_House['no_lights']; ?>>
             </div>
             <div class="form-group">
               <label for="update_house_house_type">House Type:</label>
               <p>If option is not avaiable choose closest option</p>
               <select class="form-control" id="update_house_house_type" name="house_type">
-                <option value=<?php echo $User_House['house_type']; ?> selected disabled hidden> <?php echo $User_House['house_type']; ?></option>
-                <option value="detached_house">Detached house</option>
-                <option value="semi_detached_house">Semi-detached house</option>
-                <option value="mid_terrace_house">Mid-terrace house</option>
-                <option value="detached_bungalow">Detached bungalow</option>
-                <option value="mid_floor_flat">Mid-floor flat</option>
+                <option value="detached_house" <?php if($User_House['house_type'] == "detached_house"){?> selected <?php } ?>>Detached house</option>
+                <option value="semi_detached_house" <?php if($User_House['house_type'] == "semi_detached_house"){?> selected <?php } ?>>Semi-detached house</option>
+                <option value="mid_terrace_house" <?php if($User_House['house_type'] == "mid_terrace_house"){?> selected <?php } ?>>Mid-terrace house</option>
+                <option value="detached_bungalow" <?php if($User_House['house_type'] == "detached_bungalow"){?> selected <?php } ?>>Detached bungalow</option>
+                <option value="mid_floor_flat" <?php if($User_House['house_type'] == "mid_floor_flat"){?> selected <?php } ?>>Mid-floor flat</option>
               </select>
             </div>
             <div class="form-group">
               <label for="update_house_current_heating_device">Current Heating Device:</label>
               <p>If option is not avaiable choose closest option</p>
               <select class="form-control" id="update_house_current_heating_device" name="current_heating_device">
-                <option value=<?php echo $User_House['current_heating_device']; ?> selected disabled hidden> <?php echo $User_House['current_heating_device']; ?></option>
-                <option value="old_gas">Old (G-rated) gas boiler</option>
-                <option value="new_gas">New (A-rated) gas boiler</option>
-                <option value="old_electric">Old electric storage heater</option>
-                <option value="new_eletric">New electric storage heater</option>
-                <option value="old_oil">Old (G-rated) oil boiler</option>
-                <option value="new_oil">New (A-rated) oil boiler</option>
-                <option value="old_lpg">Old (G-rated) LPG boiler</option>
-                <option value="new_lpg">New (A-rated) LPG boiler</option>
-                <option value="coal">Coal</option>
+                <option value="old_gas" <?php if($User_House['current_heating_device'] == "old_gas"){?> selected <?php } ?>>Old (G-rated) gas boiler</option>
+                <option value="new_gas" <?php if($User_House['current_heating_device'] == "new_gas"){?> selected <?php } ?>>New (A-rated) gas boiler</option>
+                <option value="old_electric" <?php if($User_House['current_heating_device'] == "old_electric"){?> selected <?php } ?>>Old electric storage heater</option>
+                <option value="new_eletric" <?php if($User_House['current_heating_device'] == "new_eletric"){?> selected <?php } ?>>New electric storage heater</option>
+                <option value="old_oil" <?php if($User_House['current_heating_device'] == "old_oil"){?> selected <?php } ?>>Old (G-rated) oil boiler</option>
+                <option value="new_oil" <?php if($User_House['current_heating_device'] == "new_oil"){?> selected <?php } ?>>New (A-rated) oil boiler</option>
+                <option value="old_lpg" <?php if($User_House['current_heating_device'] == "old_lpg"){?> selected <?php } ?>>Old (G-rated) LPG boiler</option>
+                <option value="new_lpg" <?php if($User_House['current_heating_device'] == "new_lpg"){?> selected <?php } ?>>New (A-rated) LPG boiler</option>
+                <option value="coal" <?php if($User_House['current_heating_device'] == "coal"){?> selected <?php } ?>>Coal</option>
               </select>
             </div>
             <div class="form-group">
               <label for="update_house_closest_area">Closest Area:</label>
               <p>If option is not avaiable choose closest option</p>
               <select class="form-control" id="update_house_closest_area" name="closest_area">
-                <option value=<?php echo $User_House['closest_area']; ?> selected disabled hidden> <?php echo $User_House['closest_area']; ?></option>
-                <option value="london">London, Southeast England</option>
-                <option value="aberystwyth">Aberystwyth, Wales</option>
-                <option value="manchester">Manchester, North England</option>
-                <option value="stirling">Stirling, Scotland</option>
-                <option value="belfast">Belfast, Northern Ireland</option>
+                <option value="london" <?php if($User_House['closest_area'] == "london"){?> selected <?php } ?>>London, Southeast England</option>
+                <option value="aberystwyth" <?php if($User_House['closest_area'] == "aberystwyth"){?> selected <?php } ?>>Aberystwyth, Wales</option>
+                <option value="manchester" <?php if($User_House['closest_area'] == "manchester"){?> selected <?php } ?>>Manchester, North England</option>
+                <option value="stirling" <?php if($User_House['closest_area'] == "stirling"){?> selected <?php } ?>>Stirling, Scotland</option>
+                <option value="belfast" <?php if($User_House['closest_area'] == "belfast"){?> selected <?php } ?>>Belfast, Northern Ireland</option>
               </select>
             </div>
             <button type="submit" name="update_house" value="1" class="btn btn-shadesofgreen">Update House Details</button>
@@ -322,10 +325,10 @@ $User_House = $user_House->getHouse();
             <div class="slidecontainer">
               <label for="input_house_roof_angle">Roof Angle:</label>
               <p>Take the largest side of the house's roof and estimate/measure the angle it is at to get to the highest point</p>
-              <input type="range" class="slider" id="input_house_roof_angle" min="0" max="90">
+              <input type="range" class="slider" id="input_house_roof_angle" name="roof_angle" min="0" max="90">
               <p>Value: <span id="value"></span>°</p>
             </div>
-            <script>                                                                            <!-- // www.w3schools.com/howto/howto_js_rangeslider.asp -->
+            <script>
               var slider = document.getElementById("input_house_roof_angle");
               var output = document.getElementById("value");
               output.innerHTML = slider.value;
@@ -346,20 +349,20 @@ $User_House = $user_House->getHouse();
               <input type="number" class="form-control" id="input_house_radiator_area" name="radiator_area">
             </div>
             <div class="form-group">
-              <label for="input_house_guttering">Does the House have Guttering:</label>
-              <input type="checkbox" name="input_house_guttering" value=1>
+              <label for="input_house_guttering">Does the House have Guttering: </label>
+              <input type="checkbox" id="input_house_guttering" name="guttering" value=1>
             </div>
             <div class="form-group">
-              <label for="input_house_guttering">Does the House have an Attic:</label>
-              <input type="checkbox" name="input_house_attic" value=1>
+              <label for="input_house_guttering">Does the House have an Attic: </label>
+              <input type="checkbox" id="input_house_attic" name="attic" value=1>
             </div>
             <div class="form-group">
-              <label for="input_house_guttering">Does the House have a Hot Water Tank:</label>
-              <input type="checkbox" name="input_house_hot_water_tank" value=1>
+              <label for="input_house_guttering">Does the House have a Hot Water Tank: </label>
+              <input type="checkbox" id="input_house_hot_water_tank" name="hot_water_tank" value=1>
             </div>
             <div class="form-group">
-              <label for="input_house_no_light">Number of Lights:</label>
-              <input type="number" class="form-control" id="input_house_no_light" name="no_light">
+              <label for="input_house_no_lights">Number of Lights:</label>
+              <input type="number" class="form-control" id="input_house_no_lights" name="no_lights">
             </div>
             <div class="form-group">
               <label for="input_house_house_type">House Type:</label>

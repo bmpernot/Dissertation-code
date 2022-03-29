@@ -13,7 +13,7 @@ class House {
     $stmt->execute([
       "ID" => $_SESSION['user_data']['ID']
     ]);
-    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
   public function inputHouse($user_data){
@@ -121,9 +121,9 @@ class House {
       'house_length' => $user_data['house_length'],
       'house_height' => $user_data['house_height'],
       'window_area' => $user_data['window_area'],
-      'no_windows_first_floor' => $user_data['no_windows_first_floor'],
-      'no_windows_second_floor' => $user_data['no_windows_second_floor'],
-      'no_windows_thrid_floor' => $user_data['no_windows_thrid_floor'],
+      'no_windows_first_floor' => $user_data['window_number_first_floor'],
+      'no_windows_second_floor' => $user_data['window_number_second_floor'],
+      'no_windows_thrid_floor' => $user_data['window_number_thrid_floor'],
       'roof_angle' => $user_data['roof_angle'],
       'guttering' => $user_data['guttering'],
       'garden_length' => $user_data['garden_length'],

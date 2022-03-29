@@ -7929,6 +7929,7 @@ body#page-account h2 {
   font-weight: 100;
   color: #000000;
   font-size: 1.8rem;
+  padding-top: 10px;
   border-bottom: solid 2px #9ad494; }
 
 body#page-account-edit form label {

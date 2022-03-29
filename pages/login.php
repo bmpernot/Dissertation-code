@@ -34,12 +34,6 @@ if($_POST){
         $_SESSION['user_data'] = $user_data;
         echo '<script>window.location.replace("index.php");</script>';
 
-        // might not work
-        ?>
-            <div class="alert alert-success" role="alert">
-                Success - You have been logged in, welcome back!
-            </div>
-        <?php
       }else{
         // Credentials incorrect
         ?>

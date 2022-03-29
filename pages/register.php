@@ -26,13 +26,16 @@
               $Customer = new Customer($Conn);
               $attempt = $Customer->createCustomer($_POST);
 
-              if($attempt) {
-                  ?>
-                      <div class="alert alert-success" role="alert">
-                          Success - User created - Please login!
-                      </div>
-                  <?php
-              }else{
+              if($attempt == false){
+                ?>
+                    <div class="alert alert-danger" role="alert">
+                        Error - Username already in use.
+                    </div>
+                <?php
+              }
+              elseif($attempt) {
+                echo '<script>window.location.replace("index.php?p=login");</script>';
+              } else {
                   ?>
                       <div class="alert alert-danger" role="alert">
                           Error - An error occurred, please try again later.

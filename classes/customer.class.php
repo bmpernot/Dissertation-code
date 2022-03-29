@@ -10,7 +10,7 @@
        $query = "SELECT * FROM User WHERE username = :username";
        $stmt = $this->Conn->prepare($query);
        $stmt->execute(array('username' => strtolower($user_data['username'])));
-       $attempt = $stmt->fetch();
+       $attempt = $stmt->fetchAll();
 
        if($attempt){
          return false;
@@ -47,27 +47,36 @@
       }
      }
 
-     public function deleteCustomer($user_data){
+     public function verifyCustomer($user_data){
        $query = "SELECT * FROM User WHERE username = :username";
        $stmt = $this->Conn->prepare($query);
        $stmt->execute(array('username' => strtolower($user_data['username'])));
        $attempt = $stmt->fetch();
 
        if($attempt && password_verify($user_data['password'], $attempt['password'])) {
-         $query = "DELETE User, House
-         FROM User
-         INNER JOIN House
-         WHERE User.ID = House.ID
-         AND User.ID = :ID";
-
-         $stmt = $this->Conn->prepare($query);
-
-         return $stmt->execute(array(
-           'ID' => $_SESSION['user_data']['ID']
-         ));
+         return true;
        }
-       else{
-         return false;
-      }
+     }
+
+     public function deleteCustomer($user_data){
+       $query = "DELETE FROM User WHERE ID = :ID";
+
+       $stmt = $this->Conn->prepare($query);
+       $stmt->execute(array(
+         'ID' => $_SESSION['user_data']['ID']
+       ));
+
+       return true;
+     }
+
+     public function deleteHouse($user_data){
+       $query = "DELETE FROM House WHERE ID = :ID";
+
+       $stmt = $this->Conn->prepare($query);
+       $stmt->execute(array(
+         'ID' => $_SESSION['user_data']['ID']
+       ));
+
+       return true;
      }
   }
