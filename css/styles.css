@@ -1,7 +1,7 @@
 /*
 Error: Invalid CSS after "  }": expected "}", was ""
-        on line 22 of pages/_roof-insulation.scss
-        from line 29 of main.scss
+        on line 22 of pages/_radiator-reflectors.scss
+        from line 46 of main.scss
 
 17: 
 18:     .btn {
@@ -10,8 +10,8 @@ Error: Invalid CSS after "  }": expected "}", was ""
 21:   }
 
 Backtrace:
-pages/_roof-insulation.scss:22
-main.scss:29
+pages/_radiator-reflectors.scss:22
+main.scss:46
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1308:in `expected'
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1238:in `expected'
 C:/Ruby27-x64/lib/ruby/gems/2.7.0/gems/sass-3.7.4/lib/sass/scss/parser.rb:1233:in `tok!'
@@ -60,4 +60,4 @@ C:/Ruby27-x64/bin/sass:23:in `<main>'
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"  }\": expected \"}\", was \"\"\A         on line 22 of pages/_roof-insulation.scss\A         from line 29 of main.scss\A \A 17: \A 18:     .btn {\A 19:       margin-bottom: 15px;\A 20:     }\A 21:   }"; }
+  content: "Error: Invalid CSS after \"  }\": expected \"}\", was \"\"\A         on line 22 of pages/_radiator-reflectors.scss\A         from line 46 of main.scss\A \A 17: \A 18:     .btn {\A 19:       margin-bottom: 15px;\A 20:     }\A 21:   }"; }
