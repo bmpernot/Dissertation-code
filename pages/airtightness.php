@@ -3,7 +3,17 @@
   <div class="row">
     <div class="col-md-6">
       <h2>Description:</h2>
-      <p></p>
+      <p>Draught proofing is the act of making the house airtight to ensure the heat stays in the house. There are many area where draughts are most common such as:<br>
+        -	Windows<br>
+        -	Doors<br>
+        -	Chimneys<br>
+        -	Floorboards and skirting boards<br>
+        -	Loft hatches<br>
+        -	Pipework<br>
+        -	Old extractor fans<br>
+        -	Cracks in walls<br>
+        However there are product that have been designed to make these areas airtight.
+      </p>
     </div>
     <div id="even" class="col-md-6">
       <?php //if(house detail meets requirements){
@@ -24,14 +34,14 @@
   </div>
   <div id="odd" class="row">
     <h2>How it will be installed:</h2>
-    <p></p>
+    <p>Each draught proofing product will come with its own instructions. However for draughtproofing doors and windows make sure to line the edges of the doors and windows to have a continuous seal to ensure it is airtight when the doors and windows are closed.</p>
   </div>
   <div id="even" class="row">
     <h2>Instructions:</h2>
-    <p></p>
+    <p>When operating the device after making it airtight make sure not to damage the draught proofing as it will not be effective if it cannot make a continuous seal.</p>
   </div>
   <div id="odd" class="row">
     <h2>The science:</h2>
-    <p></p>
+    <p>If the house is airtight it force all heat that wants to get out of the house to transfer the heat though the insulation which is not very effective, therefore keeping the heat inside the house.</p>
   </div>
 </div>

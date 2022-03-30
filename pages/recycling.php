@@ -3,7 +3,7 @@
   <div class="row">
     <div class="col-md-6">
       <h2>Description:</h2>
-      <p></p>
+      <p>The UK government is making a nationwide effort to try and make recycling easier for the people. They are doing this by making companies responsible for what they produce. They are making more market for recycled materials and are improving recycling collection from households. </p>
     </div>
     <div id="even" class="col-md-6">
       <?php //if(house detail meets requirements){
@@ -24,7 +24,7 @@
   </div>
   <div id="odd" class="row">
     <h2>How it will be installed:</h2>
-    <p></p>
+    <p>There are products that can be brought to put the bins in but as long as they are put in a moderately level location which is sheltered from the wind so it does not get tipped over in the wind it will be fine.</p>
   </div>
   <div id="even" class="row">
     <h2>Instructions:</h2>
@@ -32,6 +32,17 @@
   </div>
   <div id="odd" class="row">
     <h2>The science:</h2>
-    <p></p>
+    <p>Do not bag the item when putting them in the bin and make sure the items are clean and dry. There are only certain item that are allowed to be recycled and the list is constantly expanding as technology is developed to recycle new materials but as it stands the following materials can be recycled:<br>
+      -	Aerosol cans<br>
+      -	Aluminium foil and trays<br>
+      -	Cardboard<br>
+      -	Metal food and drink cans<br>
+      -	Paper, newspapers, magazines and junk mail<br>
+      -	Paperback and hardback books<br>
+      -	Plastic bathroom and household cleaning products<br>
+      -	Plastic bottles<br>
+      -	Plastic yoghurt pots, tubs and food trays<br>
+      Anything else cannot be recycled and be put into the waste bin or go to a disposal site. It is always best to check the products to see if they have a recycling sign on it which means that it can be recycled.
+    </p>
   </div>
 </div>

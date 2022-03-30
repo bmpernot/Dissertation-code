@@ -2,6 +2,7 @@ body#page-wall-insulation{
   #even {
     padding-top: 15px;
     padding-bottom: 15px;
+    border-radius: 3px;
     background-color: $secondary-color;
 
     .btn{
@@ -12,9 +13,9 @@ body#page-wall-insulation{
   #odd {
     padding-top: 15px;
     padding-bottom: 15px;
+    border-radius: 3px;
 
     .btn {
       margin-bottom: 15px;
     }
   }
-}
