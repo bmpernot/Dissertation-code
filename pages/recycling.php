@@ -6,20 +6,25 @@
       <p>The UK government is making a nationwide effort to try and make recycling easier for the people. They are doing this by making companies responsible for what they produce. They are making more market for recycled materials and are improving recycling collection from households. </p>
     </div>
     <div id="even" class="col-md-6">
-      <?php //if(house detail meets requirements){
-        //use house details to calulate the price
-
-        ?>
-        <h2>Estimated Price:</h1>
-        <h1><?php // echo $price ?></h1>
-        <h2>Estimated Profit per Week:</h1>
-        <h1><?php // echo $profit ?></h1>
-        <h2>Cost to Profit Ratio:</h1>
-        <h1><?php // echo $cost_profit ?></h1>
-        <p><small>Price will vary due to extra circumstance that can not be accounted for such as loaction of the house and the soil the house is based apon among other things as well.</small></p>
-      <?php // } else { ?>
-        <h3>Login / Register and enter your house details for an accurate price for this eco housing option.</h3>
-      <?php // } ?>
+      <?php if($_SESSION['is_logged_in']){
+            $user_House = new House($Conn);
+            $User_House = $user_House->getHouse();
+            if($User_House){
+              if(// house requirements){ ?>
+                <h2>Estimated Price:</h1>
+                <h1>£<?php echo $price ?></h1>
+                <h2>Estimated Profit per Week:</h1>
+                <h1>£<?php echo $profit ?></h1>
+                <h2>Payback Time:</h1>
+                <h1><?php  echo $Payback ?> Years</h1>
+                <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
+              <?php } else {?>
+                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
+            <?php }} else { ?>
+              <h3>Enter your house details for accurate information about this eco housing option.</h3>
+      <?php }} else { ?>
+        <h3>Login / Register and enter your house details for accurate information about this eco housing option.</h3>
+      <?php } ?>
     </div>
   </div>
   <div id="odd" class="row">

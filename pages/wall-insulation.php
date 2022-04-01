@@ -10,20 +10,105 @@
       </p>
     </div>
     <div id="even" class="col-md-6">
-      <?php //if(house detail meets requirements){
-        //use house details to calulate the price
-
-        ?>
-        <h2>Estimated Price:</h1>
-        <h1><?php // echo $price ?></h1>
-        <h2>Estimated Profit per Week:</h1>
-        <h1><?php // echo $profit ?></h1>
-        <h2>Cost to Profit Ratio:</h1>
-        <h1><?php // echo $cost_profit ?></h1>
-        <p><small>Price will vary due to extra circumstance that can not be accounted for such as loaction of the house and the soil the house is based apon among other things as well.</small></p>
-      <?php // } else { ?>
-        <h3>Login / Register and enter your house details for an accurate price for this eco housing option.</h3>
-      <?php // } ?>
+      <?php if($_SESSION['is_logged_in']){
+            $user_House = new House($Conn);
+            $User_House = $user_House->getHouse();
+            if($User_House){
+              $wall_surface_area = 2 * (($User_House['house_length'] * $User_House['house_height'])+($User_House['house_width'] * $User_House['house_height']));
+              if($User_House == "detached_house"){
+                $solid_profit = 425;
+                $solid_CO2 = 1490;
+                $cavity_price_beads_low = 610 + (18 * $wall_surface_area);
+                $cavity_price_firbe_low = 610 + (13 * $wall_surface_area);
+                $cavity_price_foam_low = 610 + (22 * $wall_surface_area);
+                $cavity_price_beads_high = 610 + (22 * $wall_surface_area);
+                $cavity_price_firbe_high = 610 + (18 * $wall_surface_area);
+                $cavity_price_foam_high = 610 + (26 * $wall_surface_area);
+                $cavity_profit = 185;
+                $cavity_CO2 = 1100;
+              }elseif ($User_House == "semi_detached_house") {
+                $solid_profit = 255;
+                $solid_CO2 = 890;
+                $cavity_price_beads_low = 475 + (18 * $wall_surface_area);
+                $cavity_price_firbe_low = 475 + (13 * $wall_surface_area);
+                $cavity_price_foam_low = 475 + (22 * $wall_surface_area);
+                $cavity_price_beads_high = 475 + (22 * $wall_surface_area);
+                $cavity_price_firbe_high = 475 + (18 * $wall_surface_area);
+                $cavity_price_foam_high = 475 + (26 * $wall_surface_area);
+                $cavity_profit = 310;
+                $cavity_CO2 = 660;
+              }elseif ($User_House == "mid_terrace_house") {
+                $solid_profit = 160;
+                $solid_CO2 = 560;
+                $cavity_price_beads_low = 390 + (18 * $wall_surface_area);
+                $cavity_price_firbe_low = 390 + (13 * $wall_surface_area);
+                $cavity_price_foam_low = 390 + (22 * $wall_surface_area);
+                $cavity_price_beads_high = 390 + (22 * $wall_surface_area);
+                $cavity_price_firbe_high = 390 + (18 * $wall_surface_area);
+                $cavity_price_foam_high = 390 + (26 * $wall_surface_area);
+                $cavity_profit = 120;
+                $cavity_CO2 = 415;
+              }elseif ($User_House == "detached_bungalow") {
+                $solid_profit = 170;
+                $solid_CO2 = 600;
+                $cavity_price_beads_low = 460 + (18 * $wall_surface_area);
+                $cavity_price_firbe_low = 460 + (13 * $wall_surface_area);
+                $cavity_price_foam_low = 460 + (22 * $wall_surface_area);
+                $cavity_price_beads_high = 460 + (22 * $wall_surface_area);
+                $cavity_price_firbe_high = 460 + (18 * $wall_surface_area);
+                $cavity_price_foam_high = 460 + (26 * $wall_surface_area);
+                $cavity_profit = 125;
+                $cavity_CO2 = 440;
+              }elseif ($User_House == "mid_floor_flat") {
+                $solid_profit = 125;
+                $solid_CO2 = 440;
+                $cavity_price_beads_low = 345 + (18 * $wall_surface_area);
+                $cavity_price_firbe_low = 345 + (13 * $wall_surface_area);
+                $cavity_price_foam_low = 345 + (22 * $wall_surface_area);
+                $cavity_price_beads_high = 345 + (22 * $wall_surface_area);
+                $cavity_price_firbe_high = 345 + (18 * $wall_surface_area);
+                $cavity_price_foam_high = 345 + (26 * $wall_surface_area);
+                $cavity_profit = 95;
+                $cavity_CO2 = 325;
+              }
+              $solid_payback_internal = 8200 / $solid_profit;
+              $solid_payback_external = 10000 / $solid_profit;
+              $cavity_payback_beads_low = $cavity_price_beads_low / $cavity_profit;
+              $cavity_payback_firbe_low = $cavity_price_firbe_low / $cavity_profit;
+              $cavity_payback_foam_low = $cavity_price_foam_low / $cavity_profit;
+              $cavity_payback_beads_high = $cavity_price_beads_high / $cavity_profit;
+              $cavity_payback_firbe_high = $cavity_price_firbe_high / $cavity_profit;
+              $cavity_payback_foam_high = $cavity_price_foam_high / $cavity_profit;?>
+                <h1>Solid Wall Installation:</h1>
+                <h2>Estimated Price:</h1>
+                <p><small>Typical price for a 3-bedroom, semi-detached house</small></p>
+                <h1>External: £10000<br>
+                Internal: £8200</h1>
+                <h2>Estimated Energy Bill Savings per Year:</h1>
+                <h1>£<?php echo $solid_profit ?></h1>
+                <h2>Estimated CO<sub>2</sub> Savings per Year:</h1>
+                <h1>£<?php echo $solid_CO2; ?></h1>
+                <h2>Payback Time:</h1>
+                <h1>Internal: <?php  echo $solid_payback_internal; ?> Years<br>External: <?php echo $solid_payback_external;?></h1>
+                <h1>Cavaity Wall Installation:</h1>
+                <h2>Estimated Price:</h1>
+                <h1>Polystyrene beads: £<?php echo($cavity_price_beads_low); ?>-£<?php echo($cavity_price_beads_high); ?><br>
+                    Blown mineral fibre: £<?php echo ($cavity_price_firbe_low); ?>-£<?php echo($cavity_price_firbe_high); ?><br>
+                    Polyurethane foam: £<?php echo ($cavity_price_foam_low); ?>-£<?php echo($cavity_price_foam_high); ?></h1>
+                <h2>Estimated Energy Bill Savings per Year:</h1>
+                <h1>£<?php echo $cavity_profit; ?></h1>
+                <h2>Estimated CO<sub>2</sub> Savings per Year:</h1>
+                <h1>£<?php echo $cavity_CO2; ?></h1>
+                <h2>Payback Time:</h1>
+                <h1>Polystyrene beads: <?php echo(round($cavity_payback_beads_low)); ?>-<?php echo(round($cavity_payback_beads_high)); ?> Years<br>
+                    Blown mineral fibre: <?php echo(round($cavity_payback_firbe_low)); ?><?php echo(round($cavity_payback_firbe_high)); ?> Years<br>
+                    Polyurethane foam: <?php echo(round($cavity_payback_foam_low)); ?><?php echo(round($cavity_payback_foam_high));?> Years</h1>
+                <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
+              <?php } else { ?>
+              <h3>Enter your house details for accurate information about this eco housing option.</h3>
+      <?php }} else { ?>
+        <h3>Login / Register and enter your house details for accurate information about this eco housing option.</h3>
+      <?php } ?>
     </div>
   </div>
   <div id="odd" class="row">

@@ -6,20 +6,46 @@
       <p>Roof insulation creates a protective barrier between areas of different temperate that insulated homes to keep it warm. This also help reduce the energy used to heat up the house and reduce carbon emissions. Most house have roof insulation but is usually not enough as to be to most effective 270mm insulation must be fitted.</p>
     </div>
     <div id="even" class="col-md-6">
-      <?php //if(house detail meets requirements){
-        //use house details to calulate the price
-
-        ?>
-        <h2>Estimated Price:</h1>
-        <h1><?php // echo $price ?></h1>
-        <h2>Estimated Profit per Week:</h1>
-        <h1><?php // echo $profit ?></h1>
-        <h2>Cost to Profit Ratio:</h1>
-        <h1><?php // echo $cost_profit ?></h1>
-        <p><small>Price will vary due to extra circumstance that can not be accounted for such as loaction of the house and the soil the house is based apon among other things as well.</small></p>
-      <?php // } else { ?>
-        <h3>Login / Register and enter your house details for an accurate price for this eco housing option.</h3>
-      <?php // } ?>
+      <?php if($_SESSION['is_logged_in']){
+            $user_House = new House($Conn);
+            $User_House = $user_House->getHouse();
+            if($User_House){
+              if($User_House['house_type'] != "mid_floor_flat"){
+                $roof_surface_area = 2 * ($User_House['house_length'] * ((0.5 *  $User_House['house_width']) / cos($User_House['roof_angle'])));
+                if($User_House == "detached_house"){
+                  $price = 395 + ($roof_surface_area)*12;
+                  $profit = 380;
+                  $CO2 = 1310;
+                }elseif ($User_House == "semi_detached_house") {
+                  $price = 300 + ($roof_surface_area)*12;
+                  $profit = 165;
+                  $CO2 = 580;
+                }elseif ($User_House == "mid_terrace_house") {
+                  $price = 285 + ($roof_surface_area)*12;
+                  $profit = 150;
+                  $CO2 = 530;
+                }elseif ($User_House == "detached_bungalow") {
+                  $price = 375 + ($roof_surface_area)*12;
+                  $profit = 235;
+                  $CO2 = 830;
+                }
+                $payback = $price/$profit;?>
+                <h2>Estimated Price:</h1>
+                <h1>£<?php echo $price; ?></h1>
+                <h2>Estimated Energy Bill Savings per Year:</h1>
+                <h1>£<?php echo $profit; ?></h1>
+                <h2>Estimated CO<sub>2</sub> Savings per Year:</h1>
+                <h1>£<?php echo $CO2; ?></h1>
+                <h2>Payback Time:</h1>
+                <h1><?php  echo(round($payback, 2)); ?> Years</h1>
+                <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
+              <?php } else {?>
+                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
+            <?php }} else { ?>
+              <h3>Enter your house details for accurate information about this eco housing option.</h3>
+      <?php }} else { ?>
+        <h3>Login / Register and enter your house details for accurate information about this eco housing option.</h3>
+      <?php } ?>
     </div>
   </div>
   <div id="odd" class="row">

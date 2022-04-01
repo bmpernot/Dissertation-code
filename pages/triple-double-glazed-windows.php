@@ -6,20 +6,25 @@
       <p>Double or triple glazed glass refers to having multiple panes of glass against each other with a dense gas such as argon in between each pane to act as an insulator for both heat and sound. The glass can easily be replaced as all the structural requirements are already met so it is a matter of uninstalling and reinstalling. However, depending on the material used to hold the glass, price can differ dramatically.</p>
     </div>
     <div id="even" class="col-md-6">
-      <?php //if(house detail meets requirements){
-        //use house details to calulate the price
-
-        ?>
-        <h2>Estimated Price:</h1>
-        <h1><?php // echo $price ?></h1>
-        <h2>Estimated Profit per Week:</h1>
-        <h1><?php // echo $profit ?></h1>
-        <h2>Cost to Profit Ratio:</h1>
-        <h1><?php // echo $cost_profit ?></h1>
-        <p><small>Price will vary due to extra circumstance that can not be accounted for such as loaction of the house and the soil the house is based apon among other things as well.</small></p>
-      <?php // } else { ?>
-        <h3>Login / Register and enter your house details for an accurate price for this eco housing option.</h3>
-      <?php // } ?>
+      <?php if($_SESSION['is_logged_in']){
+            $user_House = new House($Conn);
+            $User_House = $user_House->getHouse();
+            if($User_House){
+              if(// house requirements){ ?>
+                <h2>Estimated Price:</h1>
+                <h1>£<?php echo $price ?></h1>
+                <h2>Estimated Profit per Week:</h1>
+                <h1>£<?php echo $profit ?></h1>
+                <h2>Payback Time:</h1>
+                <h1><?php  echo $Payback ?> Years</h1>
+                <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
+              <?php } else {?>
+                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
+            <?php }} else { ?>
+              <h3>Enter your house details for accurate information about this eco housing option.</h3>
+      <?php }} else { ?>
+        <h3>Login / Register and enter your house details for accurate information about this eco housing option.</h3>
+      <?php } ?>
     </div>
   </div>
   <div id="odd" class="row">

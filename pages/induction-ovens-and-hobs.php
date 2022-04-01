@@ -6,20 +6,25 @@
       <p>Induction hobs directly heat the pan or tray by using magnetic fields to generate energy. This is better than the traditional hob which use gas, electric rings or heating elements which generate heat which is then transferred to the pan or tray. This reduces heating time, and which reduces the fuels  or electric bills depending on what system the homeowner is upgrading from. It is safer the hob only heats the pan or tray, so the hob is cool as soon as the pan is removed. </p>
     </div>
     <div id="even" class="col-md-6">
-      <?php //if(house detail meets requirements){
-        //use house details to calulate the price
-
-        ?>
-        <h2>Estimated Price:</h1>
-        <h1><?php // echo $price ?></h1>
-        <h2>Estimated Profit per Week:</h1>
-        <h1><?php // echo $profit ?></h1>
-        <h2>Cost to Profit Ratio:</h1>
-        <h1><?php // echo $cost_profit ?></h1>
-        <p><small>Price will vary due to extra circumstance that can not be accounted for such as loaction of the house and the soil the house is based apon among other things as well.</small></p>
-      <?php // } else { ?>
-        <h3>Login / Register and enter your house details for an accurate price for this eco housing option.</h3>
-      <?php // } ?>
+      <?php if($_SESSION['is_logged_in']){
+            $user_House = new House($Conn);
+            $User_House = $user_House->getHouse();
+            if($User_House){
+              if(// house requirements){ ?>
+                <h2>Estimated Price:</h1>
+                <h1>£<?php echo $price ?></h1>
+                <h2>Estimated Profit per Week:</h1>
+                <h1>£<?php echo $profit ?></h1>
+                <h2>Payback Time:</h1>
+                <h1><?php  echo $Payback ?> Years</h1>
+                <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
+              <?php } else {?>
+                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
+            <?php }} else { ?>
+              <h3>Enter your house details for accurate information about this eco housing option.</h3>
+      <?php }} else { ?>
+        <h3>Login / Register and enter your house details for accurate information about this eco housing option.</h3>
+      <?php } ?>
     </div>
   </div>
   <div id="odd" class="row">
