@@ -30,13 +30,13 @@
                   $CO2 = 830;
                 }
                 $payback = $price/$profit;?>
-                <h2>Estimated Price:</h1>
+                <h2>Estimated Price:</h2>
                 <h1>£<?php echo $price; ?></h1>
-                <h2>Estimated Energy Bill Savings per Year:</h1>
+                <h2>Estimated Energy Bill Savings per Year:</h2>
                 <h1>£<?php echo $profit; ?></h1>
-                <h2>Estimated CO<sub>2</sub> Savings per Year:</h1>
-                <h1>£<?php echo $CO2; ?></h1>
-                <h2>Payback Time:</h1>
+                <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>
+                <h1><?php echo $CO2; ?>Kg</h1>
+                <h2>Payback Time:</h2>
                 <h1><?php  echo(round($payback, 2)); ?> Years</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
               <?php } else {?>

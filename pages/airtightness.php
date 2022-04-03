@@ -16,25 +16,11 @@
       </p>
     </div>
     <div id="even" class="col-md-6">
-      <?php if($_SESSION['is_logged_in']){
-            $user_House = new House($Conn);
-            $User_House = $user_House->getHouse();
-            if($User_House){
-              if(// house requirements){ ?>
-                <h2>Estimated Price:</h1>
-                <h1>£<?php echo $price ?></h1>
-                <h2>Estimated Profit per Week:</h1>
-                <h1>£<?php echo $profit ?></h1>
-                <h2>Payback Time:</h1>
-                <h1><?php  echo $Payback ?> Years</h1>
-                <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
-              <?php } else {?>
-                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
-            <?php }} else { ?>
-              <h3>Enter your house details for accurate information about this eco housing option.</h3>
-      <?php }} else { ?>
-        <h3>Login / Register and enter your house details for accurate information about this eco housing option.</h3>
-      <?php } ?>
+      <h2>Estimated Price:</h2>
+      <h1>£200+ <small>(depends on the size of the house, how many external doors and window there are and weather you want a professional to do it for you.) </small></h1>
+      <h2>Estimated Energy Bill Savings per Year:</h2>
+      <h1>£50+ <small>(if done correctly and is not already airtight)</small></h1>
+      <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
     </div>
   </div>
   <div id="odd" class="row">

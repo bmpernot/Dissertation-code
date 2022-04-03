@@ -10,16 +10,70 @@
             $user_House = new House($Conn);
             $User_House = $user_House->getHouse();
             if($User_House){
-              if(// house requirements){ ?>
-                <h2>Estimated Price:</h1>
-                <h1>£<?php echo $price ?></h1>
-                <h2>Estimated Profit per Week:</h1>
-                <h1>£<?php echo $profit ?></h1>
-                <h2>Payback Time:</h1>
-                <h1><?php  echo $Payback ?> Years</h1>
+              if($User_House['house_type'] != "mid_floor_flat"){
+                $half_roof_surface_area = ($User_House['house_length'] * ((0.5 *  $User_House['house_width']) / cos($User_House['roof_angle'])));
+                $solar_panel = false;
+                if ($half_roof_surface_area >= 43) {
+                  $solar_panel = true;
+                  $price_low = 8000;
+                  $price_high = 10000;
+                }
+                elseif ($half_roof_surface_area >= 32) {
+                  $solar_panel = true;
+                  $price_low = 7000;
+                  $price_high = 9000;
+                }
+                elseif ($half_roof_surface_area >= 29) {
+                  $solar_panel = true;
+                  $price_low = 6000;
+                  $price_high = 8000;
+                }
+                elseif ($half_roof_surface_area >= 22) {
+                  $solar_panel = true;
+                  $price_low = 5000;
+                  $price_high = 6000;
+                }
+                if($User_House['closest_area'] == "london"){
+                  $CO2 = 940;
+                  $profit_low = 120;
+                  $payback = 16;
+                  $profit_high = 410;
+                } elseif ($User_House['closest_area'] == "aberystwyth") {
+                  $CO2 = 840;
+                  $profit_low = 115;
+                  $payback = 17;
+                  $profit_high = 385;
+                } elseif ($User_House['closest_area'] == "manchester") {
+                  $CO2 = 820;
+                  $profit_low = 115;
+                  $payback = 18;
+                  $profit_high = 380;
+                }elseif ($User_House['closest_area'] == "stirling") {
+                  $CO2 = 740;
+                  $profit_low = 110;
+                  $payback = 19;
+                  $profit_high = 360;
+                }elseif ($User_House['closest_area'] == "belfast") {
+                  $CO2 = 780;
+                  $profit_low = 120;
+                  $payback = 23;
+                  $profit_high = 375;
+                }
+                if($solar_panel == true){
+                ?>
+                <h2>Estimated Price:</h2>
+                <h1>£<?php echo $price_low; ?>-£<?php echo $price_high; ?></h1>
+                <h2>Estimated Energy Bill Savings per Year:</h2>
+                <h1>£<?php echo $profit_low; ?>-£<?php echo $profit_high; ?></h1>
+                <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>
+                <h1><?php echo $CO2; ?>Kg</h1>
+                <h2>Payback Time:</h2>
+                <h1>Ranging between <?php  echo $payback ?> Years and Never depending on how much time is spent at home.</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
+                <?php } else {?>
+                  <h3>Your house does not meet the requirements to accomidate this eco housing option as you need a bigger roof.<h3>
               <?php } else {?>
-                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
+                <h3>Your house does not meet the requirements to accomidate this eco housing option as you need a roof.<h3>
             <?php }} else { ?>
               <h3>Enter your house details for accurate information about this eco housing option.</h3>
       <?php }} else { ?>

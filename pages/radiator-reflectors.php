@@ -12,16 +12,38 @@
             $user_House = new House($Conn);
             $User_House = $user_House->getHouse();
             if($User_House){
-              if(// house requirements){ ?>
-                <h2>Estimated Price:</h1>
-                <h1>£<?php echo $price ?></h1>
-                <h2>Estimated Profit per Week:</h1>
-                <h1>£<?php echo $profit ?></h1>
-                <h2>Payback Time:</h1>
-                <h1><?php  echo $Payback ?> Years</h1>
+              if($User_House['radiator_no'] > 0 && $User_House['radiator_area'] > 0){
+                $price = $User_House['radiator_area'];
+                $profit_reflector_low = $User_House['radiator_area'] * 19 * 0.28;
+                $CO2_reflector_low = $User_House['radiator_area'] * 4.74;
+                $profit_reflector_high = $User_House['radiator_area'] * 94.9 * 0.28;
+                $CO2_reflector_high = $User_House['radiator_area'] * 23.72;
+                if($User_House['house_type'] == "detached_house"){
+                  $profit = 100;
+                  $CO2 = 500;
+                }elseif ($User_House['house_type'] == "semi_detached_house") {
+                  $profit = 90;
+                  $CO2 = 455;
+                }elseif ($User_House['house_type'] == "mid_terrace_house") {
+                  $profit = 110;
+                  $CO2 = 530;
+                }elseif ($User_House['house_type'] == "detached_bungalow") {
+                  $profit = 95;
+                  $CO2 = 485;
+                }elseif ($User_House['house_type'] == "mid_floor_flat") {
+                  $profit = 1000;
+                  $CO2 = 490;
+                }
+                ?>
+                <h2>Estimated Price:</h2>
+                <h1>Radiator reflectors: £<?php echo $price; ?><br>Pipe insulation: £1.50 per Meter<?php if($User_House['hot_water_tank'] == 1){ ?><br>Hot Water Tank Insulation: £20<?php } ?></h1>
+                <h2>Estimated Energy Bill Savings per Year:</h2>
+                <h1>Radiator reflectors: £<?php echo $profit_reflector_low; ?>-£<?php echo $profit_reflector_high; ?><br>Hot Water Tank Insulation: £<?php echo $profit; ?></h1>
+                <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>
+                <h1>Radiator reflectors: <?php echo $CO2_reflector_low; ?>-<?php echo $CO2_reflector_high; ?>Kg<br>Hot Water Tank Insulation: <?php echo $CO2; ?>Kg</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
               <?php } else {?>
-                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
+                <h3>Your house does not meet the requirements to accomidate this eco housing option as the house requires radiators.<h3>
             <?php }} else { ?>
               <h3>Enter your house details for accurate information about this eco housing option.</h3>
       <?php }} else { ?>

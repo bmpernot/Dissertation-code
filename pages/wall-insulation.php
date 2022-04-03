@@ -15,7 +15,7 @@
             $User_House = $user_House->getHouse();
             if($User_House){
               $wall_surface_area = 2 * (($User_House['house_length'] * $User_House['house_height'])+($User_House['house_width'] * $User_House['house_height']));
-              if($User_House == "detached_house"){
+              if($User_House['house_type'] == "detached_house"){
                 $solid_profit = 425;
                 $solid_CO2 = 1490;
                 $cavity_price_beads_low = 610 + (18 * $wall_surface_area);
@@ -26,7 +26,7 @@
                 $cavity_price_foam_high = 610 + (26 * $wall_surface_area);
                 $cavity_profit = 185;
                 $cavity_CO2 = 1100;
-              }elseif ($User_House == "semi_detached_house") {
+              }elseif ($User_House['house_type'] == "semi_detached_house") {
                 $solid_profit = 255;
                 $solid_CO2 = 890;
                 $cavity_price_beads_low = 475 + (18 * $wall_surface_area);
@@ -37,7 +37,7 @@
                 $cavity_price_foam_high = 475 + (26 * $wall_surface_area);
                 $cavity_profit = 310;
                 $cavity_CO2 = 660;
-              }elseif ($User_House == "mid_terrace_house") {
+              }elseif ($User_House['house_type'] == "mid_terrace_house") {
                 $solid_profit = 160;
                 $solid_CO2 = 560;
                 $cavity_price_beads_low = 390 + (18 * $wall_surface_area);
@@ -48,7 +48,7 @@
                 $cavity_price_foam_high = 390 + (26 * $wall_surface_area);
                 $cavity_profit = 120;
                 $cavity_CO2 = 415;
-              }elseif ($User_House == "detached_bungalow") {
+              }elseif ($User_House['house_type'] == "detached_bungalow") {
                 $solid_profit = 170;
                 $solid_CO2 = 600;
                 $cavity_price_beads_low = 460 + (18 * $wall_surface_area);
@@ -59,7 +59,7 @@
                 $cavity_price_foam_high = 460 + (26 * $wall_surface_area);
                 $cavity_profit = 125;
                 $cavity_CO2 = 440;
-              }elseif ($User_House == "mid_floor_flat") {
+              }elseif ($User_House['house_type'] == "mid_floor_flat") {
                 $solid_profit = 125;
                 $solid_CO2 = 440;
                 $cavity_price_beads_low = 345 + (18 * $wall_surface_area);
@@ -80,25 +80,25 @@
               $cavity_payback_firbe_high = $cavity_price_firbe_high / $cavity_profit;
               $cavity_payback_foam_high = $cavity_price_foam_high / $cavity_profit;?>
                 <h1>Solid Wall Installation:</h1>
-                <h2>Estimated Price:</h1>
+                <h2>Estimated Price:</h2>
                 <p><small>Typical price for a 3-bedroom, semi-detached house</small></p>
                 <h1>External: £10000<br>
                 Internal: £8200</h1>
-                <h2>Estimated Energy Bill Savings per Year:</h1>
-                <h1>£<?php echo $solid_profit ?></h1>
-                <h2>Estimated CO<sub>2</sub> Savings per Year:</h1>
-                <h1>£<?php echo $solid_CO2; ?></h1>
-                <h2>Payback Time:</h1>
+                <h2>Estimated Energy Bill Savings per Year:</h2>
+                <h1>£<?php echo $solid_profit; ?></h1>
+                <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>
+                <h1><?php echo $solid_CO2; ?>Kg</h1>
+                <h2>Payback Time:</h2>
                 <h1>Internal: <?php  echo $solid_payback_internal; ?> Years<br>External: <?php echo $solid_payback_external;?></h1>
                 <h1>Cavaity Wall Installation:</h1>
-                <h2>Estimated Price:</h1>
+                <h2>Estimated Price:</h2>
                 <h1>Polystyrene beads: £<?php echo($cavity_price_beads_low); ?>-£<?php echo($cavity_price_beads_high); ?><br>
                     Blown mineral fibre: £<?php echo ($cavity_price_firbe_low); ?>-£<?php echo($cavity_price_firbe_high); ?><br>
                     Polyurethane foam: £<?php echo ($cavity_price_foam_low); ?>-£<?php echo($cavity_price_foam_high); ?></h1>
-                <h2>Estimated Energy Bill Savings per Year:</h1>
+                <h2>Estimated Energy Bill Savings per Year:</h2>
                 <h1>£<?php echo $cavity_profit; ?></h1>
-                <h2>Estimated CO<sub>2</sub> Savings per Year:</h1>
-                <h1>£<?php echo $cavity_CO2; ?></h1>
+                <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>
+                <h1><?php echo $cavity_CO2; ?>Kg</h2>
                 <h2>Payback Time:</h1>
                 <h1>Polystyrene beads: <?php echo(round($cavity_payback_beads_low)); ?>-<?php echo(round($cavity_payback_beads_high)); ?> Years<br>
                     Blown mineral fibre: <?php echo(round($cavity_payback_firbe_low)); ?><?php echo(round($cavity_payback_firbe_high)); ?> Years<br>

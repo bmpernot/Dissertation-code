@@ -10,13 +10,13 @@
             $user_House = new House($Conn);
             $User_House = $user_House->getHouse();
             if($User_House){
-              if(// house requirements){ ?>
-                <h2>Estimated Price:</h1>
-                <h1>£<?php echo $price ?></h1>
-                <h2>Estimated Profit per Week:</h1>
-                <h1>£<?php echo $profit ?></h1>
-                <h2>Payback Time:</h1>
-                <h1><?php  echo $Payback ?> Years</h1>
+              if($User_House['radiator_no'] > 0 && $User_House['radiator_area'] > 0){
+                $price = 60*$User_House['radiator_no'];
+                ?>
+                <h2>Estimated Price:</h2>
+                <h1>Zone Control: £180 per Zone want in the house<br>Individual Room Control: £<?php echo $price ?></h1>
+                <h2>Estimated Savings:</h2>
+                <h1>Depends on the user to save energy by not heating unused rooms in the house.</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
               <?php } else {?>
                 <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>

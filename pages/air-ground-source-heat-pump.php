@@ -10,17 +10,81 @@
             $user_House = new House($Conn);
             $User_House = $user_House->getHouse();
             if($User_House){
-              if(// house requirements){ ?>
-                <h2>Estimated Price:</h1>
-                <h1>£<?php echo $price ?></h1>
-                <h2>Estimated Profit per Week:</h1>
-                <h1>£<?php echo $profit ?></h1>
-                <h2>Payback Time:</h1>
-                <h1><?php  echo $Payback ?> Years</h1>
+              if ($User_House['current_heating_device'] == "old_gas"){
+                $profit_air = 450;
+                $profit_ground = 540;
+                $CO2_air = 5400;
+                $CO2_ground = 5500;
+              }
+              elseif($User_House['current_heating_device'] == "new_gas"){
+                $profit_air = -205;
+                $profit_ground = -115;
+                $CO2_air = 2650;
+                $CO2_ground = 2800;
+              }
+              elseif($User_House['current_heating_device'] == "old_electric"){
+                $profit_air = 1330;
+                $profit_ground = 1420;
+                $CO2_air = 3750;
+                $CO2_ground = 3850;
+              }
+              elseif($User_House['current_heating_device'] == "new_eletric"){
+                $profit_air = 720;
+                $profit_ground = 810;
+                $CO2_air = 2550;
+                $CO2_ground = 2650;
+              }
+              elseif($User_House['current_heating_device'] == "old_oil"){
+                $profit_air = 435;
+                $profit_ground = 530;
+                $CO2_air = 8500;
+                $CO2_ground = 8700;
+              }
+              elseif($User_House['current_heating_device'] == "new_oil"){
+                $profit_air = -290;
+                $profit_ground = -200;
+                $CO2_air = 4300;
+                $CO2_ground = 4450;
+              }
+              elseif($User_House['current_heating_device'] == "old_lpg"){
+                $profit_air = 1410;
+                $profit_ground = 1500;
+                $CO2_air = 6500;
+                $CO2_ground = 6600;
+              }
+              elseif($User_House['current_heating_device'] == "new_lpg"){
+                $profit_air = 360;
+                $profit_ground = 450;
+                $CO2_air = 3300;
+                $CO2_ground = 3450;
+              }
+              elseif($User_House['current_heating_device'] == "coal") {
+                $profit_air = 395;
+                $profit_ground = 485;
+                $CO2_air = 11500;
+                $CO2_ground = 11600;
+              }
+              $payback_air_low = 7000/$profit_air;
+              $payback_ground_low = 14000/$profit_ground;
+              $payback_air_high = 13000/$profit_air;
+              $payback_ground_high = 19000/$profit_ground;
+              if ($payback_air <= 0){
+                $payback_air = "Never";
+              }
+              if ($payback_ground <= 0){
+                $payback_air = "Never";
+              }
+              ?>
+                <h2>Estimated Price:</h2>
+                <h1>Air Source Heat Pump: £7000-£13000<br>Ground Source Heat Pump: £14000-£19000</h1>
+                <h2>Estimated Energy Bill Savings per Year:</h2>
+                <h1>Air Source Heat Pump: £<?php echo $profit_air; ?><br>Ground Source Heat Pump: £<?php echo $profit_ground; ?></h1>
+                <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>
+                <h1>Air Source Heat Pump: £<?php echo $CO2_air; ?>Kg<br>Ground Source Heat Pump: <?php echo $CO2_ground; ?>Kg</h1>
+                <h2>Payback Time:</h2>
+                <h1>Air Source Heat Pump: <?php  echo(round($payback_air_low));?>-<?php  echo(round($payback_air_high)); ?> Years<br>Ground Source Heat Pump: <?php  echo $payback_ground_low; ?>-<?php  echo $payback_ground_low; ?> Years</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
-              <?php } else {?>
-                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
-            <?php }} else { ?>
+            <?php } else { ?>
               <h3>Enter your house details for accurate information about this eco housing option.</h3>
       <?php }} else { ?>
         <h3>Login / Register and enter your house details for accurate information about this eco housing option.</h3>

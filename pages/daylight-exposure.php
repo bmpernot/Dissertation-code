@@ -9,16 +9,35 @@
       <?php if($_SESSION['is_logged_in']){
             $user_House = new House($Conn);
             $User_House = $user_House->getHouse();
+            $skylights = false;
+            $top_hung = false;
+            $centre = false;
+            $centre_recommended = false;
             if($User_House){
-              if(// house requirements){ ?>
-                <h2>Estimated Price:</h1>
-                <h1>£<?php echo $price ?></h1>
-                <h2>Estimated Profit per Week:</h1>
-                <h1>£<?php echo $profit ?></h1>
-                <h2>Payback Time:</h1>
-                <h1><?php  echo $Payback ?> Years</h1>
+              if($User_House['house_type'] != "mid_floor_flat"){
+                if ($User_House['roof_angle'] != 90) {
+                  if ($User_House['roof_angle'] > 0 && $User_House['roof_angle'] <= 15) {
+                    $skylights = true;
+                  }
+                  elseif ($User_House['roof_angle'] >= 15 && $User_House['roof_angle'] <= 75) {
+                    $top_hung = true;
+                  }
+                  elseif ($User_House['roof_angle'] > 15 && $User_House['roof_angle'] < 90) {
+                    $centre = true;
+                    if ($User_House['roof_angle'] >= 75){
+                      $centre_recommended = true;
+                    }
+                  }
+                ?>
+                <h2>Estimated Price:</h2>
+                <?php if($skylights == true) { ?><h1>Skylights (recommend): £1450-£3000 Per Window</h1><?php }
+                if($top_hung == true) { ?><h1>Top-Hung Window (recommend): £1300-£1800 Per Window</h1><?php }
+                if($centre_recommended == true) { ?><h1>Centre-Pivot Window (recommend): £1450-£3000 Per Window</h1><?php }
+                elseif($centre == true) { ?><h1>Centre-Pivot Window: £1160-£1600 Per Window</h1><?php } ?>
+                <h2>Estimated Energy Bill Savings per Year:</h2>
+                <h1>16-20% <small>(Depending on electricity bill, house location and orientation.)</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
-              <?php } else {?>
+              <?php }} else {?>
                 <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
             <?php }} else { ?>
               <h3>Enter your house details for accurate information about this eco housing option.</h3>

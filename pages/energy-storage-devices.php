@@ -10,25 +10,18 @@
       </p>
     </div>
     <div id="even" class="col-md-6">
-      <?php if($_SESSION['is_logged_in']){
-            $user_House = new House($Conn);
-            $User_House = $user_House->getHouse();
-            if($User_House){
-              if(// house requirements){ ?>
-                <h2>Estimated Price:</h1>
-                <h1>£<?php echo $price ?></h1>
-                <h2>Estimated Profit per Week:</h1>
-                <h1>£<?php echo $profit ?></h1>
-                <h2>Payback Time:</h1>
-                <h1><?php  echo $Payback ?> Years</h1>
-                <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
-              <?php } else {?>
-                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
-            <?php }} else { ?>
-              <h3>Enter your house details for accurate information about this eco housing option.</h3>
-      <?php }} else { ?>
-        <h3>Login / Register and enter your house details for accurate information about this eco housing option.</h3>
-      <?php } ?>
+      <h2>Estimated Price:</h2>
+      <h1>Eletrical Batteries (Size - Price): 3 - 4 kWh - £3410+<br>4 - 7 kWh - £4288+<br>7 - 9 kWh	- £5185+<br>9 - 13.5 kWh	- £5920+</h1>
+      <h1>Heat Batteries (Size - Price): 70 Litres - £1800-£1900<br>150 Litres - £2000-£2500<br>210 Litres - £2500-£3000<br>300 Litres - £3200-£3400</h1>
+      <h1>Thermal stores (Product - Price): Budget Unvented Thermal Store	- £1,100<br>Budget Vented Thermal Store	- £1,200<br>Unvented Thermal Store - £1,400<br>Vented Thermal Store - £1,600<br>Top of the Range Unvented Thermal Store - £1,800<br>Top of the Range Vented Thermal Store - £2,000</h1>
+      <h2>Estimated Savings per Year:</h2>
+      <h1>Eletrical Batteries: £274</h1>
+      <h1>Heat Batteries: £480</h1>
+      <h1>Thermal stores: This system does not save energy but prevent the user from wasting it.</h1>
+      <h2>Payback:</h2>
+      <h1>Eletrical Batteries: 12.44 - 21.60 Years</h1>
+      <h1>Heat Batteries: 3.75 - 7.08 Years</h1>
+      <h1>Thermal stores: Unknown</h1>
     </div>
   </div>
   <div id="odd" class="row">

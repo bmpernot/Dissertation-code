@@ -6,25 +6,11 @@
       <p>Induction hobs directly heat the pan or tray by using magnetic fields to generate energy. This is better than the traditional hob which use gas, electric rings or heating elements which generate heat which is then transferred to the pan or tray. This reduces heating time, and which reduces the fuels  or electric bills depending on what system the homeowner is upgrading from. It is safer the hob only heats the pan or tray, so the hob is cool as soon as the pan is removed. </p>
     </div>
     <div id="even" class="col-md-6">
-      <?php if($_SESSION['is_logged_in']){
-            $user_House = new House($Conn);
-            $User_House = $user_House->getHouse();
-            if($User_House){
-              if(// house requirements){ ?>
-                <h2>Estimated Price:</h1>
-                <h1>£<?php echo $price ?></h1>
-                <h2>Estimated Profit per Week:</h1>
-                <h1>£<?php echo $profit ?></h1>
-                <h2>Payback Time:</h1>
-                <h1><?php  echo $Payback ?> Years</h1>
-                <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
-              <?php } else {?>
-                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
-            <?php }} else { ?>
-              <h3>Enter your house details for accurate information about this eco housing option.</h3>
-      <?php }} else { ?>
-        <h3>Login / Register and enter your house details for accurate information about this eco housing option.</h3>
-      <?php } ?>
+      <h2>Estimated Price:</h2>
+      <h1>Range: £150-£2000 - Average: £500 (Depend on the size of the unit) Equipment: £20-£50</h1>
+      <h2>Satistics: (type - time taken to boil a large pan of water - Cost to boil a large pan of water)</h2>
+      <h1>Induction	- 3.56 mins	- £0.02<br>Gas	- 8.27 mins	- £0.0108<br>Electric	- 7.38 mins	- £0.035</h1>
+      <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
     </div>
   </div>
   <div id="odd" class="row">

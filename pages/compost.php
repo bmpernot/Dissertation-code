@@ -10,16 +10,11 @@
             $user_House = new House($Conn);
             $User_House = $user_House->getHouse();
             if($User_House){
-              if(// house requirements){ ?>
-                <h2>Estimated Price:</h1>
-                <h1>£<?php echo $price ?></h1>
-                <h2>Estimated Profit per Week:</h1>
-                <h1>£<?php echo $profit ?></h1>
-                <h2>Payback Time:</h1>
-                <h1><?php  echo $Payback ?> Years</h1>
-                <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
+              if($User_House['garden_width']*$User_House['garden_length'] <= 0){ ?>
+                <h2>Estimated Price:</h2>
+                <h1>Plastic: £25-£75<br>Wooden: £40-£100<br>Heat Retaining: £150-£250<br>Worm: £50-£300</h1>
               <?php } else {?>
-                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
+                <h3>Your house does not meet the requirements to accomidate this eco housing option as it requires space outside to place.<h3>
             <?php }} else { ?>
               <h3>Enter your house details for accurate information about this eco housing option.</h3>
       <?php }} else { ?>

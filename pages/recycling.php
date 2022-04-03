@@ -3,28 +3,11 @@
   <div class="row">
     <div class="col-md-6">
       <h2>Description:</h2>
-      <p>The UK government is making a nationwide effort to try and make recycling easier for the people. They are doing this by making companies responsible for what they produce. They are making more market for recycled materials and are improving recycling collection from households. </p>
+      <p>The UK government is making a nationwide effort to try and make recycling easier for the people. They are doing this by making companies responsible for what they produce. They are making more market for recycled materials and are improving recycling collection from households. Fortunately the cost of the having the bin empty every two weeks is covered in the council tax. However more bins can be purchased, or a community bin can be acquired.</p>
     </div>
     <div id="even" class="col-md-6">
-      <?php if($_SESSION['is_logged_in']){
-            $user_House = new House($Conn);
-            $User_House = $user_House->getHouse();
-            if($User_House){
-              if(// house requirements){ ?>
-                <h2>Estimated Price:</h1>
-                <h1>£<?php echo $price ?></h1>
-                <h2>Estimated Profit per Week:</h1>
-                <h1>£<?php echo $profit ?></h1>
-                <h2>Payback Time:</h1>
-                <h1><?php  echo $Payback ?> Years</h1>
-                <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
-              <?php } else {?>
-                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
-            <?php }} else { ?>
-              <h3>Enter your house details for accurate information about this eco housing option.</h3>
-      <?php }} else { ?>
-        <h3>Login / Register and enter your house details for accurate information about this eco housing option.</h3>
-      <?php } ?>
+      <h2>Volume(litres) - Price per Year</h2>
+      <h1>80 - £39.50<br>120 - £39.65<br>140 - £43.20<br>240	- £49.50<br>360	- £72.50<br>500	- £162.01<br>660	- £168.20<br>770	- £172.24<br>1100	- £189.30</h1>
     </div>
   </div>
   <div id="odd" class="row">

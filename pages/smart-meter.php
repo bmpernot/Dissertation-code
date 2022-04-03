@@ -6,25 +6,11 @@
       <p>Smart meters are a useful tool to help monitor gas and electricity meters automatically and can show energy usage in pound and pence. This allows the homeowner to easily identify what is using energy and how they can save costs by changing the way the homeowners and occupants live. Unfortunately not every house can have one as they need to connect to the internet so of the existing meter is outside internet range it cannot be installed. However, there are options to extend internet if applicable.</p>
     </div>
     <div id="even" class="col-md-6">
-      <?php if($_SESSION['is_logged_in']){
-            $user_House = new House($Conn);
-            $User_House = $user_House->getHouse();
-            if($User_House){
-              if(// house requirements){ ?>
-                <h2>Estimated Price:</h1>
-                <h1>£<?php echo $price ?></h1>
-                <h2>Estimated Profit per Week:</h1>
-                <h1>£<?php echo $profit ?></h1>
-                <h2>Payback Time:</h1>
-                <h1><?php  echo $Payback ?> Years</h1>
-                <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
-              <?php } else {?>
-                <h3>Your house does not meet the requirements to accomidate this eco housing option.<h3>
-            <?php }} else { ?>
-              <h3>Enter your house details for accurate information about this eco housing option.</h3>
-      <?php }} else { ?>
-        <h3>Login / Register and enter your house details for accurate information about this eco housing option.</h3>
-      <?php } ?>
+      <h2>Estimated Price:</h2>
+      <h1>Free!</h1>
+      <h2>Estimated Savings:</h2>
+      <h1>This pruely depends on you to see what is using the most electric and gas and to minimise it or remove it from your lifestyle to reduce energy bills</h1>
+      <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
     </div>
   </div>
   <div id="odd" class="row">
