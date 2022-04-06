@@ -8241,12 +8241,14 @@ body#page-home img {
 body#page-home #even {
   padding-top: 15px;
   padding-bottom: 15px;
-  background-color: #9ad494; }
+  background-color: #9ad494;
+  border-radius: 3px; }
   body#page-home #even .btn {
     background-color: #d8ffd4; }
 body#page-home #odd {
   padding-top: 15px;
-  padding-bottom: 15px; }
+  padding-bottom: 15px;
+  border-radius: 3px; }
   body#page-home #odd .btn {
     margin-bottom: 15px; }
 

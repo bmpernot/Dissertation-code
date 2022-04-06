@@ -16,7 +16,7 @@
                 ?>
                 <h2>Estimated Price:</h2>
                 <h1>£<?php echo $price_low; ?>-£<?php echo $price_high; ?></h1>
-                <h2>Estimated Savings (Type of Light - Heat - Power - Lifespan - UV)</h2>
+                <h2>Statistics (Type of Light - Heat - Power - Lifespan - UV)</h2>
                 <h1>Halogen - 80-90% of total energy - 90 Watts - 800-1200 Hours - Minimal</h1>
                 <h1>LED - 10-20% of total energy - 8 Watts - 50000-60000 Hours - None</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>

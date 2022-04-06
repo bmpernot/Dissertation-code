@@ -82,7 +82,7 @@
                 <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>
                 <h1>Air Source Heat Pump: £<?php echo $CO2_air; ?>Kg<br>Ground Source Heat Pump: <?php echo $CO2_ground; ?>Kg</h1>
                 <h2>Payback Time:</h2>
-                <h1>Air Source Heat Pump: <?php  echo(round($payback_air_low));?>-<?php  echo(round($payback_air_high)); ?> Years<br>Ground Source Heat Pump: <?php  echo $payback_ground_low; ?>-<?php  echo $payback_ground_low; ?> Years</h1>
+                <h1>Air Source Heat Pump: <?php  echo(round($payback_air_low, 2));?>-<?php  echo(round($payback_air_high, 2)); ?> Years<br>Ground Source Heat Pump: <?php  echo(round($payback_ground_low, 2)); ?>-<?php  echo(round($payback_ground_high, 2)); ?> Years</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
             <?php } else { ?>
               <h3>Enter your house details for accurate information about this eco housing option.</h3>

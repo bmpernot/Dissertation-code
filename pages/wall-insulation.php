@@ -80,8 +80,7 @@
               $cavity_payback_firbe_high = $cavity_price_firbe_high / $cavity_profit;
               $cavity_payback_foam_high = $cavity_price_foam_high / $cavity_profit;?>
                 <h1>Solid Wall Installation:</h1>
-                <h2>Estimated Price:</h2>
-                <p><small>Typical price for a 3-bedroom, semi-detached house</small></p>
+                <h2>Estimated Price <small>(Typical price for a 3-bedroom, semi-detached house)</small>:</h2>
                 <h1>External: £10000<br>
                 Internal: £8200</h1>
                 <h2>Estimated Energy Bill Savings per Year:</h2>
@@ -89,7 +88,7 @@
                 <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>
                 <h1><?php echo $solid_CO2; ?>Kg</h1>
                 <h2>Payback Time:</h2>
-                <h1>Internal: <?php  echo $solid_payback_internal; ?> Years<br>External: <?php echo $solid_payback_external;?></h1>
+                <h1>Internal: <?php  echo(round($solid_payback_internal, 2)); ?> Years<br>External: <?php echo(round($solid_payback_external, 2));?></h1>
                 <h1>Cavaity Wall Installation:</h1>
                 <h2>Estimated Price:</h2>
                 <h1>Polystyrene beads: £<?php echo($cavity_price_beads_low); ?>-£<?php echo($cavity_price_beads_high); ?><br>
@@ -100,9 +99,9 @@
                 <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>
                 <h1><?php echo $cavity_CO2; ?>Kg</h2>
                 <h2>Payback Time:</h1>
-                <h1>Polystyrene beads: <?php echo(round($cavity_payback_beads_low)); ?>-<?php echo(round($cavity_payback_beads_high)); ?> Years<br>
-                    Blown mineral fibre: <?php echo(round($cavity_payback_firbe_low)); ?><?php echo(round($cavity_payback_firbe_high)); ?> Years<br>
-                    Polyurethane foam: <?php echo(round($cavity_payback_foam_low)); ?><?php echo(round($cavity_payback_foam_high));?> Years</h1>
+                <h1>Polystyrene beads: <?php echo(round($cavity_payback_beads_low, 2)); ?>-<?php echo(round($cavity_payback_beads_high, 2)); ?> Years<br>
+                    Blown mineral fibre: <?php echo(round($cavity_payback_firbe_low, 2)); ?>-<?php echo(round($cavity_payback_firbe_high, 2)); ?> Years<br>
+                    Polyurethane foam: <?php echo(round($cavity_payback_foam_low, 2)); ?>-<?php echo(round($cavity_payback_foam_high, 2));?> Years</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
               <?php } else { ?>
               <h3>Enter your house details for accurate information about this eco housing option.</h3>

@@ -16,13 +16,13 @@
               if($User_House['garden_width']*$User_House['garden_length'] >= 0){
                 $rainwater_harvest_system_profit = ((($User_House['house_length'] * $User_House['house_width'])/ 0.01266769)*0.11639*138.18)/100;
                 $rainwater_harvest_system_payback_low = 1000/$rainwater_harvest_system_profit;
-                $rainwater_harvest_system_payback_High = 4000/$rainwater_harvest_system_profit; ?>
+                $rainwater_harvest_system_payback_high = 4000/$rainwater_harvest_system_profit; ?>
                 <h2>Estimated Price:</h2>
                 <h1>Rainwater Collection System: £35-£100<br>Rainwater Harvesting System: £1000-£4000</h1>
                 <h2>Estimated Water Bill savings per Year:</h2>
                 <h1>Rainwater Collection System: minimal<br>Rainwater Harvesting System: <?php  echo(round($rainwater_harvest_system_profit, 2)); ?></h1>
                 <h2>Payback Time:</h2>
-                <h1>Rainwater Collection System: Never<br>Rainwater Harvesting System: <?php  echo(round($rainwater_harvest_system_payback_low, 2)); ?>-<?php  echo(round($rainwater_harvest_system_payback_high, 2)); ?> Years</h1>
+                <h1>Rainwater Collection System: Never<br>Rainwater Harvesting System: <?php  echo(round($rainwater_harvest_system_payback_low, 2)); ?>-<?php  echo(round($rainwater_harvest_system_payback_high, 2)); ?> Years<br><small>This depends heaviliy on how much it rains and how much water you use.</small></h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
               <?php } else {?>
                 <h3>Your house does not meet the requirements to accomidate this eco housing option as it requires space to put either by the side of the house or underground.<h3>

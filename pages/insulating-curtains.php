@@ -16,10 +16,12 @@
             $user_House = new House($Conn);
             $User_House = $user_House->getHouse();
             if($User_House){
-              $number_of_windows = $User_House['window_number_first_floor'] + $User_House['window_number_second_floor'] + $User_House['window_number_thrid_floor'];
-              if($number_of_windows > 0 && $User_House['window_area'] > 0){ ?>
+              $number_of_windows = $User_House['no_windows_first_floor'] + $User_House['no_windows_second_floor'] + $User_House['no_windows_thrid_floor'];
+              if($number_of_windows > 0 && $User_House['window_area'] > 0){
+                $price_low = 10*$number_of_windows;
+                $price_high = 250*$number_of_windows; ?>
                 <h2>Estimated Price:</h1>
-                <h1>£10-£250 depending on style, size and functionality.</h1>
+                <h1>£<?php echo(round($price_low, 2)) ?>-£<?php echo(round($price_high, 2)) ?> depending on style, size and functionality.</h1>
                 <h2>Estimated Savings:</h1>
                 <h1>Reduces heat transmission by approximately 19%</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>

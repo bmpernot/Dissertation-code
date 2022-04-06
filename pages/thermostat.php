@@ -14,7 +14,7 @@
                 $price = 60*$User_House['radiator_no'];
                 ?>
                 <h2>Estimated Price:</h2>
-                <h1>Zone Control: £180 per Zone want in the house<br>Individual Room Control: £<?php echo $price ?></h1>
+                <h1>Zone Control: £180 per Zone wanted in the house<br>Individual Room Control: £<?php echo $price ?></h1>
                 <h2>Estimated Savings:</h2>
                 <h1>Depends on the user to save energy by not heating unused rooms in the house.</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>

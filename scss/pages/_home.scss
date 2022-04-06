@@ -6,6 +6,7 @@ body#page-home {
     padding-top: 15px;
     padding-bottom: 15px;
     background-color: $secondary-color;
+    border-radius: 3px;
 
     .btn{
       background-color: $primary-color;
@@ -15,6 +16,7 @@ body#page-home {
   #odd {
     padding-top: 15px;
     padding-bottom: 15px;
+    border-radius: 3px;
 
     .btn {
       margin-bottom: 15px;

@@ -19,10 +19,10 @@
                   if ($User_House['roof_angle'] > 0 && $User_House['roof_angle'] <= 15) {
                     $skylights = true;
                   }
-                  elseif ($User_House['roof_angle'] >= 15 && $User_House['roof_angle'] <= 75) {
+                  if ($User_House['roof_angle'] >= 15 && $User_House['roof_angle'] <= 75) {
                     $top_hung = true;
                   }
-                  elseif ($User_House['roof_angle'] > 15 && $User_House['roof_angle'] < 90) {
+                  if ($User_House['roof_angle'] > 15 && $User_House['roof_angle'] < 90) {
                     $centre = true;
                     if ($User_House['roof_angle'] >= 75){
                       $centre_recommended = true;
@@ -30,10 +30,10 @@
                   }
                 ?>
                 <h2>Estimated Price:</h2>
-                <?php if($skylights == true) { ?><h1>Skylights (recommend): £1450-£3000 Per Window</h1><?php }
-                if($top_hung == true) { ?><h1>Top-Hung Window (recommend): £1300-£1800 Per Window</h1><?php }
-                if($centre_recommended == true) { ?><h1>Centre-Pivot Window (recommend): £1450-£3000 Per Window</h1><?php }
-                elseif($centre == true) { ?><h1>Centre-Pivot Window: £1160-£1600 Per Window</h1><?php } ?>
+                <?php if($skylights == true) { ?><h1>Skylights (recommend):<br>£1450-£3000 Per Window</h1><?php }
+                if($top_hung == true) { ?><h1>Top-Hung Window (recommend):<br>£1300-£1800 Per Window</h1><?php }
+                if($centre_recommended == true) { ?><h1>Centre-Pivot Window (recommend):<br>£1450-£3000 Per Window</h1><?php }
+                elseif($centre == true) { ?><h1>Centre-Pivot Window:<br>£1160-£1600 Per Window</h1><?php } ?>
                 <h2>Estimated Energy Bill Savings per Year:</h2>
                 <h1>16-20% <small>(Depending on electricity bill, house location and orientation.)</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>

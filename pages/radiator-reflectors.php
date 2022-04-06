@@ -38,9 +38,9 @@
                 <h2>Estimated Price:</h2>
                 <h1>Radiator reflectors: £<?php echo $price; ?><br>Pipe insulation: £1.50 per Meter<?php if($User_House['hot_water_tank'] == 1){ ?><br>Hot Water Tank Insulation: £20<?php } ?></h1>
                 <h2>Estimated Energy Bill Savings per Year:</h2>
-                <h1>Radiator reflectors: £<?php echo $profit_reflector_low; ?>-£<?php echo $profit_reflector_high; ?><br>Hot Water Tank Insulation: £<?php echo $profit; ?></h1>
+                <h1>Radiator reflectors: £<?php echo(round($profit_reflector_low, 2)); ?>-£<?php echo(round($profit_reflector_high, 2)); ?><br>Hot Water Tank Insulation: £<?php echo $profit; ?></h1>
                 <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>
-                <h1>Radiator reflectors: <?php echo $CO2_reflector_low; ?>-<?php echo $CO2_reflector_high; ?>Kg<br>Hot Water Tank Insulation: <?php echo $CO2; ?>Kg</h1>
+                <h1>Radiator reflectors: <?php echo(round($CO2_reflector_low, 2)); ?>-<?php echo(round($CO2_reflector_high, 2)); ?>Kg<br>Hot Water Tank Insulation: <?php echo $CO2; ?>Kg</h1>
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
               <?php } else {?>
                 <h3>Your house does not meet the requirements to accomidate this eco housing option as the house requires radiators.<h3>

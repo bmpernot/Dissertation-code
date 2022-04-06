@@ -25,13 +25,13 @@ $User_House = $user_House->getHouse();
       $error = "Error - Window area is not set";
     }
     elseif(!$_POST['window_number_first_floor']){
-      $error = "Error - Number of windows on the first floor is not set";
+      $_POST['window_number_first_floor'] = 0;
     }
     elseif(!$_POST['window_number_second_floor']){
-      $error = "Error - Number of windows on the second floor is not set";
+      $_POST['window_number_second_floor'] = 0;
     }
     elseif(!$_POST['window_number_thrid_floor']){
-      $error = "Error - Number of windows on the thrid floor is not set";
+      $_POST['window_number_thrid_floor'] = 0;
     }
     elseif(!$_POST['roof_angle']){
       $error = "Error - Roof angle is not set";

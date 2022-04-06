@@ -10,7 +10,7 @@
             $user_House = new House($Conn);
             $User_House = $user_House->getHouse();
             if($User_House){
-              if($User_House['garden_width']*$User_House['garden_length'] <= 0){ ?>
+              if($User_House['garden_width']*$User_House['garden_length'] >= 1){ ?>
                 <h2>Estimated Price:</h2>
                 <h1>Plastic: £25-£75<br>Wooden: £40-£100<br>Heat Retaining: £150-£250<br>Worm: £50-£300</h1>
               <?php } else {?>

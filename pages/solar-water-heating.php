@@ -33,8 +33,8 @@
               ?>
               <h2>Estimated Price (Size of System - Number of People it accomidates - Average Price)</h2>
               <h1>2m<sup>2</sup> - 2 People - £2500 – £3000<br>3m<sup>2</sup> - 3 People - £3100–£3600<br>4m<sup>2</sup> - 4 People - £3700–£4200<br>5m<sup>2</sup> -	5 People - £4300–£4800<br>6m<sup>2</sup> - 6 People - £4900–£5400</h1>
-              <h2>Estimated Energy Bill Savings per Year (Energy Bill Savings - Renewable Heat Incentive Payment):</h2>
-              <h1>£<?php echo $profit; ?> - Depending on size of teh system the goverment should pay you a set amount per year<br>2m<sup>2</sup> - £200<br>3m<sup>2</sup> - £270<br>4m<sup>2</sup> - £345<br>5m<sup>2</sup> - £445<br>6m<sup>2</sup> - £485</h1>
+              <h2>Estimated Energy Bill Savings per Year:</h2>
+              <h1>£<?php echo $profit; ?> - Depending on size of the system the goverment should pay you a set amount per year (System size - Renewable Heat Incentive Payment):<br>2m<sup>2</sup> - £200<br>3m<sup>2</sup> - £270<br>4m<sup>2</sup> - £345<br>5m<sup>2</sup> - £445<br>6m<sup>2</sup> - £485</h1>
               <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>
               <h1><?php echo $CO2; ?>Kg</h1>
               <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>

@@ -12,26 +12,26 @@
             if($User_House){
               if($User_House['house_type'] != "mid_floor_flat"){
                 $roof_surface_area = 2 * ($User_House['house_length'] * ((0.5 *  $User_House['house_width']) / cos($User_House['roof_angle'])));
-                if($User_House == "detached_house"){
+                if($User_House['house_type'] == "detached_house"){
                   $price = 395 + ($roof_surface_area)*12;
                   $profit = 380;
                   $CO2 = 1310;
-                }elseif ($User_House == "semi_detached_house") {
+                }elseif ($User_House['house_type'] == "semi_detached_house") {
                   $price = 300 + ($roof_surface_area)*12;
                   $profit = 165;
                   $CO2 = 580;
-                }elseif ($User_House == "mid_terrace_house") {
+                }elseif ($User_House['house_type'] == "mid_terrace_house") {
                   $price = 285 + ($roof_surface_area)*12;
                   $profit = 150;
                   $CO2 = 530;
-                }elseif ($User_House == "detached_bungalow") {
+                }elseif ($User_House['house_type'] == "detached_bungalow") {
                   $price = 375 + ($roof_surface_area)*12;
                   $profit = 235;
                   $CO2 = 830;
                 }
                 $payback = $price/$profit;?>
                 <h2>Estimated Price:</h2>
-                <h1>£<?php echo $price; ?></h1>
+                <h1>£<?php echo(round($price, 2)); ?></h1>
                 <h2>Estimated Energy Bill Savings per Year:</h2>
                 <h1>£<?php echo $profit; ?></h1>
                 <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>

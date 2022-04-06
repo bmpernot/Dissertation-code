@@ -6,8 +6,8 @@
       <p>The UK government is making a nationwide effort to try and make recycling easier for the people. They are doing this by making companies responsible for what they produce. They are making more market for recycled materials and are improving recycling collection from households. Fortunately the cost of the having the bin empty every two weeks is covered in the council tax. However more bins can be purchased, or a community bin can be acquired.</p>
     </div>
     <div id="even" class="col-md-6">
-      <h2>Volume(litres) - Price per Year</h2>
-      <h1>80 - £39.50<br>120 - £39.65<br>140 - £43.20<br>240	- £49.50<br>360	- £72.50<br>500	- £162.01<br>660	- £168.20<br>770	- £172.24<br>1100	- £189.30</h1>
+      <h2>Volume - Price per year:</h2>
+      <h1>80 Litres - £39.50<br>120 Litres - £39.65<br>140 Litres - £43.20<br>240 Litres	- £49.50<br>360 Litres	- £72.50<br>500 Litres	- £162.01<br>660 Litres	- £168.20<br>770 Litres	- £172.24<br>1100 Litres	- £189.30</h1>
     </div>
   </div>
   <div id="odd" class="row">

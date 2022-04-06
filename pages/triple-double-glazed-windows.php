@@ -10,7 +10,7 @@
             $user_House = new House($Conn);
             $User_House = $user_House->getHouse();
             if($User_House){
-              $number_of_windows = $User_House['window_number_first_floor'] + $User_House['window_number_second_floor'] + $User_House['window_number_thrid_floor'];
+              $number_of_windows = $User_House['no_windows_first_floor'] + $User_House['no_windows_second_floor'] + $User_House['no_windows_thrid_floor'];
               if($number_of_windows > 0 && $User_House['window_area'] > 0){
                 $average_window_size = $User_House['window_area']/$number_of_windows;
                 if($average_window_size > 0 && $average_window_size < 1.08){
@@ -55,10 +55,10 @@
                 }
                 $average_price_ground_floor = ($uPVC_ground_price_low + $uPVC_ground_price_high + $Aluminium_ground_price_low + $Aluminium_ground_price_high + $Timber_ground_price_low + $Timber_ground_price_high)/6;
                 $average_price_first_second_floor = ($uPVC_first_second_price_low + $uPVC_first_second_price_high + $Aluminium_first_second_price_low + $Aluminium_first_second_price_high + $Timber_first_second_price_low + $Timber_first_second_price_high)/6;
-                $payback = (($User_House['window_number_first_floor'] * $average_price_ground_floor) + (($User_House['window_number_second_floor'] + $User_House['window_number_thrid_floor']) * $average_price_first_second_floor)/145;
+                $payback = ($User_House['no_windows_first_floor'] * $average_price_ground_floor) + (($User_House['no_windows_second_floor'] + $User_House['no_windows_thrid_floor']) * $average_price_first_second_floor)/145;
                 ?>
                 <h2>Estimated Price (Window Frame Material - Price):</h2>
-                <p>Price increase by 10-20% if triple glazed windows are installed.</p>
+                <p>Price increase by 10-20% if triple glazed windows are installed. In addtion Price incease depending on type of window. Sash windows +50%, Tilt and turn windows +25% and Bay windows +150%.</p>
                 <h1>uPVC - Window on Ground Floor:£<?php  echo $uPVC_ground_price_low;?>-£<?php  echo $uPVC_ground_price_high; ?> - Window on First/Second Floor:£<?php  echo $uPVC_first_second_price_low;?>-£<?php  echo $uPVC_first_second_price_high; ?></h1>
                 <h1>Aluminium - Window on Ground Floor:£<?php  echo $Aluminium_ground_price_low;?>-£<?php  echo $Aluminium_ground_price_high; ?> - Window on First/Second Floor:£<?php  echo $Aluminium_first_second_price_low;?>-£<?php  echo $Aluminium_first_second_price_high; ?></h1>
                 <h1>Timber - Window on Ground Floor:£<?php  echo $Timber_ground_price_low; ?>-£<?php  echo $Timber_ground_price_high; ?> - Window on First/Second Floor:£<?php  echo $Timber_first_second_price_low;?>-£<?php  echo $Timber_first_second_price_high; ?></h1>

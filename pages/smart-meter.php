@@ -9,7 +9,7 @@
       <h2>Estimated Price:</h2>
       <h1>Free!</h1>
       <h2>Estimated Savings:</h2>
-      <h1>This pruely depends on you to see what is using the most electric and gas and to minimise it or remove it from your lifestyle to reduce energy bills</h1>
+      <h1>This purely depends on you to see what is using the most electric and gas and to minimise it or remove it from your lifestyle to reduce energy bills</h1>
       <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
     </div>
   </div>

@@ -72,7 +72,7 @@
                 <p><small>Information may not be accurate due to the house's circumstance that can not be accounted for.</small></p>
                 <?php } else {?>
                   <h3>Your house does not meet the requirements to accomidate this eco housing option as you need a bigger roof.<h3>
-              <?php } else {?>
+              <?php }} else { ?>
                 <h3>Your house does not meet the requirements to accomidate this eco housing option as you need a roof.<h3>
             <?php }} else { ?>
               <h3>Enter your house details for accurate information about this eco housing option.</h3>
