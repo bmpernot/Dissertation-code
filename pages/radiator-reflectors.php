@@ -36,7 +36,7 @@
                 }
                 ?>
                 <h2>Estimated Price:</h2>
-                <h1>Radiator reflectors: £<?php echo $price; ?><br>Pipe insulation: £1.50 per Meter<?php if($User_House['hot_water_tank'] == 1){ ?><br>Hot Water Tank Insulation: £20<?php } ?></h1>
+                <h1>Radiator reflectors: £<?php echo $price; ?><br>Pipe insulation: £1.50 per Metre<?php if($User_House['hot_water_tank'] == 1){ ?><br>Hot Water Tank Insulation: £20<?php } ?></h1>
                 <h2>Estimated Energy Bill Savings per Year:</h2>
                 <h1>Radiator reflectors: £<?php echo(round($profit_reflector_low, 2)); ?>-£<?php echo(round($profit_reflector_high, 2)); ?><br>Hot Water Tank Insulation: £<?php echo $profit; ?></h1>
                 <h2>Estimated CO<sub>2</sub> Savings per Year:</h2>

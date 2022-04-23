@@ -178,7 +178,7 @@ $User_House = $user_House->getHouse();
             </div>
             <div class="form-group">
               <label for="update_house_window_area">Window Area:</label>
-              <p>If you calulate the area of each window in meters² then add them all together</p>
+              <p>If you calulate the area of each window in metres² then add them all together</p>
               <p>For example; a window is 0.5m * 2m the surface area would be 1 M² and another window is 2m * 1m the surface area would be 2m²</p>
               <p>The combined area would be 3m² as 1m² + 2m² = 3m²</p>
               <input type="number" class="form-control" id="update_house_window_area" name="window_area" value=<?php echo $User_House['window_area']; ?>>
@@ -216,7 +216,7 @@ $User_House = $user_House->getHouse();
             </div>
             <div class="form-group">
               <label for="update_house_radiator_area">Radiator Surface Area:</label>
-              <p>If you calulate the area of each radiator in meters² then add them all together</p>
+              <p>If you calulate the area of each radiator in metres² then add them all together</p>
               <p>For example; a radiator is 0.5m * 2m the surface area would be 1 M² and another radiator is 2m * 1m the surface area would be 2m²</p>
               <p>The combined area would be 3m² as 1m² + 2m² = 3m²</p>
               <input type="number" class="form-control" id="update_house_radiator_area" name="radiator_area" value=<?php echo $User_House['radiator_area']; ?>>
@@ -284,28 +284,28 @@ $User_House = $user_House->getHouse();
         <div class="col-md-12">
           <form id="input_house" method="post" action="">
             <div class="form-group">
-              <label for="input_house_house_width">House Width (Meters):</label>
+              <label for="input_house_house_width">House Width (Metres):</label>
               <input type="number" class="form-control" id="input_house_house_width" name="house_width">
             </div>
             <div class="form-group">
-              <label for="input_house_house_length">House Length (Meters):</label>
+              <label for="input_house_house_length">House Length (Metres):</label>
               <input type="number" class="form-control" id="input_house_house_length" name="house_length">
             </div>
             <div class="form-group">
-              <label for="input_house_house_height">House Height (Meters):</label>
+              <label for="input_house_house_height">House Height (Metres):</label>
               <input type="number" class="form-control" id="input_house_house_height" name="house_height">
             </div>
             <div class="form-group">
-              <label for="input_house_garden_length">Garden Length (Meters):</label>
+              <label for="input_house_garden_length">Garden Length (Metres):</label>
               <input type="number" class="form-control" id="input_house_garden_length" name="garden_length">
             </div>
             <div class="form-group">
-              <label for="input_house_garden_width">Garden Width (Meters):</label>
+              <label for="input_house_garden_width">Garden Width (Metres):</label>
               <input type="number" class="form-control" id="input_house_garden_width" name="garden_width">
             </div>
             <div class="form-group">
-              <label for="input_house_window_area">Window Area (Meters²):</label>
-              <p>If you calulate the area of each window in meters² then add them all together</p>
+              <label for="input_house_window_area">Window Area (Metres²):</label>
+              <p>If you calulate the area of each window in metres² then add them all together</p>
               <p>For example; a window is 0.5m * 2m the surface area would be 1 M² and another window is 2m * 1m the surface area would be 2m²</p>
               <p>The combined area would be 3m² as 1m² + 2m² = 3m²</p>
               <input type="number" class="form-control" id="input_house_window_area" name="window_area">
@@ -342,8 +342,8 @@ $User_House = $user_House->getHouse();
               <input type="number" class="form-control" id="input_house_radiator_no" name="radiator_no">
             </div>
             <div class="form-group">
-              <label for="input_house_radiator_area">Radiator Surface Area (Meters²):</label>
-              <p>If you calulate the area of each radiator in meters² then add them all together</p>
+              <label for="input_house_radiator_area">Radiator Surface Area (Metres²):</label>
+              <p>If you calulate the area of each radiator in metres² then add them all together</p>
               <p>For example; a radiator is 0.5m * 2m the surface area would be 1 M² and another radiator is 2m * 1m the surface area would be 2m²</p>
               <p>The combined area would be 3m² as 1m² + 2m² = 3m²</p>
               <input type="number" class="form-control" id="input_house_radiator_area" name="radiator_area">
