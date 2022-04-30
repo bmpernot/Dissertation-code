@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css\styles.css">
     <script src="node_modules\jquery\dist\jquery.js"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
     <script src="https://kit.fontawesome.com/66d303bbbb.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image/x-icon" href="https://benjaminpernot.uosweb.co.uk/ShadesOfGreen/favicon.ico"/>
   </head>

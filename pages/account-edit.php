@@ -151,8 +151,7 @@ $User_House = $user_House->getHouse();
 
   <h1 class="mb-4 pb-2"> My Account</h1>
     <div class="row">
-      <?php if($User_House) {
-        var_dump($User_House)?>
+      <?php if($User_House) { ?>
         <h2>Update House Details</h2>
         <div class="col-md-12">
           <form id="update_house" method="post" action="">

@@ -127,7 +127,7 @@
         <div class="eco-housing-option-card-image" style="background-image: url('./eco-houseing-option-category-images/induction-cook-1002505.jpg')">
           <a href="index.php?p=induction-ovens-and-hobs"></a>
         </div>
-        <a href="index.php?p=induction-ovens-and-hobs"><h3>Induction Ovens and Hobs</h3></a>
+        <a href="index.php?p=induction-ovens-and-hobs"><h3>Induction Hobs</h3></a>
       </div>
     </div>
     <div class="col-md-3">
